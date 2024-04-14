@@ -59,33 +59,33 @@ proc `*`*(a: string, b: float): string =
     let bInt = toInt(floor(b))
     return bInt * a & a[0..toInt(floor((b - bInt) * len(a)))-1]
 
-# # multiply sequences and numbers
+# multiply sequences and numbers
 
-# proc `+`*[T](a: seq[T], b: float): seq[T] =
-#   return a.map(v => v + b)
+proc `*`*[T](a: seq[T], b: float): seq[T] =
+  return a.map(v => v * b)
 
-# proc `+`*[T](a: float, b: seq[T]): seq[T] =
-#   return b.map(v => v + a)
+proc `*`*[T](a: float, b: seq[T]): seq[T] =
+  return b.map(v => v * a)
 
-# proc `+`*[T](a: seq[T], b: int): seq[T] =
-#   return a.map(v => v + b)
+proc `*`*[T](a: seq[T], b: int): seq[T] =
+  return a.map(v => v * b)
 
-# proc `+`*[T](a: int, b: seq[T]): seq[T] =
-#   return b.map(v => v + a)
+proc `*`*[T](a: int, b: seq[T]): seq[T] =
+  return b.map(v => v * a)
 
-# # multiply sequences and sequences
+# multiply sequences and sequences
 
-# proc `+`*[T](a: seq[T], b: seq[T]): seq[T] =
-#   if len(a) != len(b):
-#     raise newException(
-#       Exception,
-#       "Sequences of different lengths cannot be added together! ($# vs. $#)" %
-#         [$len(a), $len(b)]
-#     )
+proc `*`*[T](a: seq[T], b: seq[T]): seq[T] =
+  if len(a) != len(b):
+    raise newException(
+      Exception,
+      "Sequences of different lengths cannot be multiplied together! ($# vs. $#)" %
+        [$len(a), $len(b)]
+    )
 
-#   var temp: seq[T] = @[]
+  var temp: seq[T] = @[]
 
-#   for i, v in a:
-#     temp.add(v + b[i])
+  for i, v in a:
+    temp.add(v * b[i])
 
-#   return temp
+  return temp
