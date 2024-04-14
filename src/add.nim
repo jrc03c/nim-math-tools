@@ -1,4 +1,5 @@
 import std/sequtils
+import std/strutils
 import std/sugar
 
 # concatenate strings and numbers
@@ -34,3 +35,19 @@ proc `+`*[T](a: seq[T], b: int): seq[T] =
 proc `+`*[T](a: int, b: seq[T]): seq[T] =
   return b.map(v => v + a)
 
+# add sequences and sequences
+
+proc `+`*[T](a: seq[T], b: seq[T]): seq[T] =
+  if len(a) != len(b):
+    raise newException(
+      Exception,
+      "Sequences of different lengths cannot be added together! ($# vs. $#)" %
+        [$len(a), $len(b)]
+    )
+
+  var temp: seq[T] = @[]
+
+  for i, v in a:
+    temp.add(v + b[i])
+
+  return temp
