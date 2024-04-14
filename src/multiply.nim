@@ -114,3 +114,15 @@ proc `-`*(a: string): string =
 
 proc `-`*[T](a: seq[T]): seq[T] =
   return a.map(v => v * -1)
+
+# create the `*=` operator
+
+proc `*=`*[T, S](a: var T, b: S) =
+  a = a * b
+
+proc `*=`*[T, S](a: var seq[T], b: S) =
+  a = a.map(v => v * b)
+
+proc `*=`*[T, S](a: var seq[T], b: seq[S]) =
+  for i, v in b:
+    a[i] = a[i] * v

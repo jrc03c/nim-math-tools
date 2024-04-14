@@ -1,1 +1,1 @@
-nim c -r --verbosity:0 $1
+nim c -r -o:temp --verbosity:0 $1
