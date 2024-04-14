@@ -89,3 +89,28 @@ proc `*`*[T](a: seq[T], b: seq[T]): seq[T] =
     temp.add(v * b[i])
 
   return temp
+
+# apply the unary `-` operator to strings
+
+proc `-`*(a: string): string =
+  return reverseString(a)
+
+# apply the unary `-` operator to sequences
+#
+# note: when applying the `-` operator to sequences, it can't be written
+# immediately before the `@` symbol, even if separated by whitespace; so these
+# examples are invalid:
+#
+# `echo -@[2, 3, 4]`
+# `echo - @[2, 3, 4]`
+#
+# however, it will work correctly if either (1) the sequence is enclosed in
+# quotation marks or (2) the sequence is referenced as a variable name; so these
+# examples are valid:
+#
+# `echo -(@[2, 3, 4])
+# `var x = @[2, 3, 4]`
+# `echo -x`
+
+proc `-`*[T](a: seq[T]): seq[T] =
+  return a.map(v => v * -1)
