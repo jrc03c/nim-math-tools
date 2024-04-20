@@ -4,8 +4,6 @@ import std/sequtils
 import std/strutils
 import std/sugar
 
-# multiply strings and numbers
-
 proc reverseString(s: string): string =
   var temp = ""
   let sLen = len(s)
@@ -91,8 +89,6 @@ proc `*`*(a: string, b: float): string =
     let bInt = toInt(floor(b))
     return bInt * a & a[0..toInt(floor((b - bInt) * len(a)))-1]
 
-# multiply sequences and numbers
-
 proc `*`*[T](a: seq[T], b: float): seq[T] =
   ## Multiplies each value in sequence `a` by `b` and returns the resulting sequence. Sequences can be arbitrarily nested. For example:
   ##
@@ -157,8 +153,6 @@ proc `*`*[T](a: int, b: seq[T]): seq[T] =
 
   return b.map(v => v * a)
 
-# multiply sequences and sequences
-
 proc `*`*[T](a: seq[T], b: seq[T]): seq[T] =
   ## Multiplies sequences `a` and `b` element-wise and returns the resulting sequence. For example:
   ##
@@ -192,8 +186,6 @@ proc `*`*[T](a: seq[T], b: seq[T]): seq[T] =
 
   return temp
 
-# apply the unary `-` operator to strings
-
 proc `-`*(a: string): string =
   ## Returns a reversed copy of string `a`. For example:
   ##
@@ -203,23 +195,6 @@ proc `-`*(a: string): string =
   ## ```
 
   return reverseString(a)
-
-# apply the unary `-` operator to sequences
-#
-# note: when applying the `-` operator to sequences, it can't be written
-# immediately before the `@` symbol, even if separated by whitespace; so these
-# examples are invalid:
-#
-# `echo -@[2, 3, 4]`
-# `echo - @[2, 3, 4]`
-#
-# however, it will work correctly if either (1) the sequence is enclosed in
-# quotation marks or (2) the sequence is referenced as a variable name; so these
-# examples are valid:
-#
-# `echo -(@[2, 3, 4])
-# `var x = @[2, 3, 4]`
-# `echo -x`
 
 proc `-`*[T](a: seq[T]): seq[T] =
   ## Multiplies each value in sequence `a` by -1 and returns the resulting array.
@@ -236,8 +211,6 @@ proc `-`*[T](a: seq[T]): seq[T] =
   ## ```
 
   return a.map(v => v * -1)
-
-# create the `*=` operator
 
 proc `*=`*[T, S](a: var T, b: S) =
   ## Multiplies `a` by `b` and stores the result back into `a`. For example:
