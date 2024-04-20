@@ -276,6 +276,7 @@
 <span class="Identifier">a</span> <span class="Operator">*=</span> <span class="DecNumber">3</span>
 <span class="Identifier">echo</span> <span class="Identifier">a</span>
 <span class="Comment"># &quot;abc!abc!abc!&quot;</span></pre></p>
+<p><strong>NOTE:</strong> Be aware that this won't work in all situations. For example, if <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> is an integer and <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> is a string, then this operation will fail — not because integers can't be multiplied by strings, but because the resulting value (a string) cannot be stored back into variable <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt>, which is defined to hold integer values.</p>
 
     
   </dd>
@@ -324,7 +325,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:50:25 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:53:30 UTC</small>
       </div>
     </div>
   </div>

@@ -223,6 +223,8 @@ proc `*=`*[T, S](a: var T, b: S) =
   ## echo a
   ## # "abc!abc!abc!"
   ## ```
+  ##
+  ## **NOTE:** Be aware that this won't work in all situations. For example, if `a` is an integer and `b` is a string, then this operation will fail — not because integers can't be multiplied by strings, but because the resulting value (a string) cannot be stored back into variable `a`, which is defined to hold integer values.
 
   a = a * b
 
