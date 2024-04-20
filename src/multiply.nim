@@ -195,6 +195,13 @@ proc `*`*[T](a: seq[T], b: seq[T]): seq[T] =
 # apply the unary `-` operator to strings
 
 proc `-`*(a: string): string =
+  ## Returns a reversed copy of string `a`. For example:
+  ##
+  ## ```
+  ## -"abc"
+  ## # "cba"
+  ## ```
+
   return reverseString(a)
 
 # apply the unary `-` operator to sequences
@@ -215,6 +222,19 @@ proc `-`*(a: string): string =
 # `echo -x`
 
 proc `-`*[T](a: seq[T]): seq[T] =
+  ## Multiplies all of the values in sequence `a` by -1 and returns the resulting array.
+  ##
+  ## **NOTE:** The minus sign must not appear immediately before the "@" symbol preceding a sequence literal expression, even when separated by whitespace! For example, both `-@[2, 3, 4]` and `- @[2, 3, 4]` are invalid according to the compiler. Instead, wrap the literal in parentheses and then place the minus sign on the outside, or store the sequence in a variable and then prepend the minus sign to the variable name. For example, these expressions are valid:
+  ##
+  ## ```
+  ## -(@[2, 3, 4])
+  ## # @[-2, -3, -4]
+  ##
+  ## let x = @[10, 20, 30]
+  ## -x
+  ## # @[-10, -20, -30]
+  ## ```
+
   return a.map(v => v * -1)
 
 # create the `*=` operator

@@ -268,7 +268,11 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#-%2Cstring"><span class="Identifier">`-`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Returns a reversed copy of string <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt>. For example:</p>
+<p><pre class="listing">
+<span class="Operator">-</span><span class="StringLit">&quot;abc&quot;</span>
+<span class="Comment"># &quot;cba&quot;</span></pre></p>
+
     
   </dd>
 </div>
@@ -276,7 +280,16 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#-%2Cseq%5BT%5D"><span class="Identifier">`-`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
   <dd>
     
-    
+    <p>Multiplies all of the values in sequence <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> by -1 and returns the resulting array.</p>
+<p><strong>NOTE:</strong> The minus sign must not appear immediately before the &quot;@&quot; symbol preceding a sequence literal expression, even when separated by whitespace! For example, both <tt class="docutils literal"><span class="pre"><span class="Operator">-@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Operator">-</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span></span></tt> are invalid according to the compiler. Instead, wrap the literal in parentheses and then place the minus sign on the outside, or store the sequence in a variable and then prepend the minus sign to the variable name. For example, these expressions are valid:</p>
+<p><pre class="listing">
+<span class="Operator">-</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
+<span class="Comment"># @[-2, -3, -4]</span>
+
+<span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="DecNumber">20</span><span class="Punctuation">,</span> <span class="DecNumber">30</span><span class="Punctuation">]</span>
+<span class="Operator">-</span><span class="Identifier">x</span>
+<span class="Comment"># @[-10, -20, -30]</span></pre></p>
+
     
   </dd>
 </div>
@@ -292,7 +305,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:31:00 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:39:47 UTC</small>
       </div>
     </div>
   </div>
