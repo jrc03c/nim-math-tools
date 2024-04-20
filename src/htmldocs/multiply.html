@@ -165,7 +165,17 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#%2A%2Cint%2Cseq%5BT%5D"><span class="Identifier">`*`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
   <dd>
     
-    
+    <p>Multiplies each value in sequence <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> by <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> and returns the resulting sequence. Sequences can be arbitrarily nested. For example:</p>
+<p><pre class="listing">
+<span class="DecNumber">5</span> <span class="Operator">*</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span>
+<span class="Comment"># @[10, 15, 20]</span>
+
+<span class="DecNumber">2</span> <span class="Operator">*</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">&quot;ab&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;cd&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;ef&quot;</span><span class="Punctuation">]</span>
+<span class="Comment"># @[&quot;abab&quot;, &quot;cdcd&quot;, &quot;efef]</span>
+
+<span class="Operator">-</span><span class="DecNumber">40</span> <span class="Operator">*</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">-</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="Operator">-</span><span class="DecNumber">20</span><span class="Punctuation">,</span> <span class="Operator">-</span><span class="DecNumber">30</span><span class="Punctuation">]</span><span class="Punctuation">]</span><span class="Punctuation">]</span>
+<span class="Comment"># @[@[@[400, 800, 1200]]]</span></pre></p>
+
     
   </dd>
 </div>
@@ -191,7 +201,17 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#%2A%2Cseq%5BT%5D%2Cint"><span class="Identifier">`*`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
   <dd>
     
-    
+    <p>Multiplies each value in sequence <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> by <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> and returns the resulting sequence. Sequences can be arbitrarily nested. For example:</p>
+<p><pre class="listing">
+<span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span> <span class="Operator">*</span> <span class="DecNumber">5</span>
+<span class="Comment"># @[10, 15, 20]</span>
+
+<span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">&quot;ab&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;cd&quot;</span><span class="Punctuation">,</span> <span class="StringLit">&quot;ef&quot;</span><span class="Punctuation">]</span> <span class="Operator">*</span> <span class="DecNumber">2</span>
+<span class="Comment"># @[&quot;abab&quot;, &quot;cdcd&quot;, &quot;efef]</span>
+
+<span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">-</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="Operator">-</span><span class="DecNumber">20</span><span class="Punctuation">,</span> <span class="Operator">-</span><span class="DecNumber">30</span><span class="Punctuation">]</span><span class="Punctuation">]</span><span class="Punctuation">]</span> <span class="Operator">*</span> <span class="Operator">-</span><span class="DecNumber">40</span>
+<span class="Comment"># @[@[@[400, 800, 1200]]]</span></pre></p>
+
     
   </dd>
 </div>
@@ -261,7 +281,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:13:15 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:15:20 UTC</small>
       </div>
     </div>
   </div>

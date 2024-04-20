@@ -126,9 +126,35 @@ proc `*`*[T](a: float, b: seq[T]): seq[T] =
   return b.map(v => v * a)
 
 proc `*`*[T](a: seq[T], b: int): seq[T] =
+  ## Multiplies each value in sequence `a` by `b` and returns the resulting sequence. Sequences can be arbitrarily nested. For example:
+  ##
+  ## ```
+  ## @[2, 3, 4] * 5
+  ## # @[10, 15, 20]
+  ##
+  ## @["ab", "cd", "ef"] * 2
+  ## # @["abab", "cdcd", "efef]
+  ##
+  ## @[@[@[-10, -20, -30]]] * -40
+  ## # @[@[@[400, 800, 1200]]]
+  ## ```
+
   return a.map(v => v * b)
 
 proc `*`*[T](a: int, b: seq[T]): seq[T] =
+  ## Multiplies each value in sequence `b` by `a` and returns the resulting sequence. Sequences can be arbitrarily nested. For example:
+  ##
+  ## ```
+  ## 5 * @[2, 3, 4]
+  ## # @[10, 15, 20]
+  ##
+  ## 2 * @["ab", "cd", "ef"]
+  ## # @["abab", "cdcd", "efef]
+  ##
+  ## -40 * @[@[@[-10, -20, -30]]]
+  ## # @[@[@[400, 800, 1200]]]
+  ## ```
+
   return b.map(v => v * a)
 
 # multiply sequences and sequences
