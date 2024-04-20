@@ -240,9 +240,27 @@ proc `-`*[T](a: seq[T]): seq[T] =
 # create the `*=` operator
 
 proc `*=`*[T, S](a: var T, b: S) =
+  ## Multiplies `a` by `b` and stores the result back into `a`. For example:
+  ##
+  ## ```
+  ## var a = "abc!"
+  ## a *= 3
+  ## echo a
+  ## # "abc!abc!abc!"
+  ## ```
+
   a = a * b
 
 proc `*=`*[T, S](a: var seq[T], b: S) =
+  ## Multiplies each value in sequence `a` by `b` and stores the resulting sequence back into `a`. For example:
+  ##
+  ## ```
+  ## var a = @[2, 3, 4]
+  ## a *= 10
+  ## echo a
+  ## # @[20, 30, 40]
+  ## ```
+
   a = a.map(v => v * b)
 
 proc `*=`*[T, S](a: var seq[T], b: seq[S]) =
