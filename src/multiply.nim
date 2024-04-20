@@ -4,6 +4,8 @@ import std/sequtils
 import std/strutils
 import std/sugar
 
+## This module overrides the `*` operator to add more functionality, like multiplying strings by numbers, multiplying sequences by numbers, multiplying sequences by other sequences, etc.
+
 proc reverseString(s: string): string =
   var temp = ""
   let sLen = len(s)
