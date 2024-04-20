@@ -255,7 +255,14 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#%2A%3D%2Cseq%5BT%5D%2Cseq%5BS%5D"><span class="Identifier">`*=`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">S</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">S</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
   <dd>
     
-    
+    <p>Multiplies sequences <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> element-wise and stores the resulting sequence back into <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt>. For example:</p>
+<p><pre class="listing">
+<span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span>
+<span class="Keyword">var</span> <span class="Identifier">b</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">6</span><span class="Punctuation">,</span> <span class="DecNumber">7</span><span class="Punctuation">]</span>
+<span class="Identifier">a</span> <span class="Operator">*=</span> <span class="Identifier">b</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span>
+<span class="Comment"># @[10, 18, 28]</span></pre></p>
+
     
   </dd>
 </div>
@@ -292,7 +299,7 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#-%2Cseq%5BT%5D"><span class="Identifier">`-`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
   <dd>
     
-    <p>Multiplies all of the values in sequence <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> by -1 and returns the resulting array.</p>
+    <p>Multiplies each value in sequence <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> by -1 and returns the resulting array.</p>
 <p><strong>NOTE:</strong> The minus sign must not appear immediately before the &quot;@&quot; symbol preceding a sequence literal expression, even when separated by whitespace! For example, both <tt class="docutils literal"><span class="pre"><span class="Operator">-@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Operator">-</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span></span></tt> are invalid according to the compiler. Instead, wrap the literal in parentheses and then place the minus sign on the outside, or store the sequence in a variable and then prepend the minus sign to the variable name. For example, these expressions are valid:</p>
 <p><pre class="listing">
 <span class="Operator">-</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
@@ -317,7 +324,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:44:42 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:46:27 UTC</small>
       </div>
     </div>
   </div>

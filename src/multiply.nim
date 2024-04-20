@@ -222,7 +222,7 @@ proc `-`*(a: string): string =
 # `echo -x`
 
 proc `-`*[T](a: seq[T]): seq[T] =
-  ## Multiplies all of the values in sequence `a` by -1 and returns the resulting array.
+  ## Multiplies each value in sequence `a` by -1 and returns the resulting array.
   ##
   ## **NOTE:** The minus sign must not appear immediately before the "@" symbol preceding a sequence literal expression, even when separated by whitespace! For example, both `-@[2, 3, 4]` and `- @[2, 3, 4]` are invalid according to the compiler. Instead, wrap the literal in parentheses and then place the minus sign on the outside, or store the sequence in a variable and then prepend the minus sign to the variable name. For example, these expressions are valid:
   ##
@@ -264,5 +264,15 @@ proc `*=`*[T, S](a: var seq[T], b: S) =
   a = a.map(v => v * b)
 
 proc `*=`*[T, S](a: var seq[T], b: seq[S]) =
+  ## Multiplies sequences `a` and `b` element-wise and stores the resulting sequence back into `a`. For example:
+  ##
+  ## ```
+  ## var a = @[2, 3, 4]
+  ## var b = @[5, 6, 7]
+  ## a *= b
+  ## echo a
+  ## # @[10, 18, 28]
+  ## ```
+
   for i, v in b:
     a[i] = a[i] * v
