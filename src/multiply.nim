@@ -16,6 +16,13 @@ proc reverseString(s: string): string =
   return temp
 
 proc `*`*(a: int, b: string): string =
+  ## "Multiplies" an integer by a string, returning `a` concatenated copies of string `b`. If `a` is negative, then the resulting string will be reversed. For example:
+  ##
+  ## ```
+  ## 3 * "abc!" # "abc!abc!abc!"
+  ## -3 * "abc!" # "!cba!cba!cba"
+  ## ```
+
   if a < 0:
     return reverseString(-a * b)
 
@@ -27,6 +34,13 @@ proc `*`*(a: int, b: string): string =
   return temp
 
 proc `*`*(a: string, b: int): string =
+  ## "Multiplies" a string by an integer, returning `b` concatenated copies of string `a`. If `b` is negative, then the resulting string will be reversed. For example:
+  ##
+  ## ```
+  ## "abc!" * 3 # "abc!abc!abc!"
+  ## "abc!" * -3 # "!cba!cba!cba"
+  ## ```
+
   if b < 0:
     return reverseString(a * -b)
 
@@ -38,6 +52,15 @@ proc `*`*(a: string, b: int): string =
   return temp
 
 proc `*`*(a: float, b: string): string =
+  ## "Multiplies" a float by a string, returning `a` concatenated copies of string `b`. Since `a` is a float value, a partial copy of `b` may be added to the end of the output. If `a` is negative, then the resulting string will be reversed. For example:
+  ##
+  ## ```
+  ## 2.5 * "12345|" # "12345|12345|123"
+  ## -2.5 * "12345|" # "321|54321|54321"
+  ## 0.25 * "abcdefghijkl" # "abc"
+  ## -0.25 * "abcdefghijkl" # "cba"
+  ## ```
+
   if a < 0:
     return reverseString(-a * b)
 
@@ -49,6 +72,15 @@ proc `*`*(a: float, b: string): string =
     return aInt * b & b[0..toInt(floor((a - aInt) * len(b)))-1]
 
 proc `*`*(a: string, b: float): string =
+  ## "Multiplies" a float by a string, returning `b` concatenated copies of string `a`. Since `b` is a float value, a partial copy of `a` may be added to the end of the output. If `b` is negative, then the resulting string will be reversed. For example:
+  ##
+  ## ```
+  ## "12345|" * 2.5 # "12345|12345|123"
+  ## "12345|" * 2.5 # "321|54321|54321"
+  ## "abcdefghijkl" * 0.25 # "abc"
+  ## "abcdefghijkl" * -0.25 # "cba"
+  ## ```
+
   if b < 0:
     return reverseString(a * -b)
 
