@@ -1,20 +1,35 @@
 import approximatelyEquals
 import multiply
 
+# strings * numbers
 assert "foo" * 3 == "foofoofoo"
 assert "Abcd" * 3.5 == "AbcdAbcdAbcdAb"
+assert "abc" * -3 == "cbacbacba"
+assert "Abcd" * -3.5 == "bAdcbAdcbAdcbA"
+
+# numbers * strings
 assert 3 * "foo" == "foofoofoo"
 assert 3.5 * "Abcd" == "AbcdAbcdAbcdAb"
-assert "abc" * -3 == "cbacbacba"
 assert -3 * "abc" == "cbacbacba"
-assert "Abcd" * -3.5 == "bAdcbAdcbAdcbA"
+assert -3.5 * "Abcd" == "bAdcbAdcbAdcbA"
+
+# sequences * numbers
 assert @["a", "b", "c"] * 3 == @["aaa", "bbb", "ccc"]
-assert 3 * @["a", "b", "c"] == @["aaa", "bbb", "ccc"]
-assert 2.5 * @["Ab", "Cd", "Ef"] == @["AbAbA", "CdCdC", "EfEfE"]
 assert @["Ab", "Cd", "Ef"] * 2.5 == @["AbAbA", "CdCdC", "EfEfE"]
 assert @[@[@["nope"]]] * 3 == @[@[@["nopenopenope"]]]
+
+# numbers * sequences
+assert 3 * @["a", "b", "c"] == @["aaa", "bbb", "ccc"]
+assert 2.5 * @["Ab", "Cd", "Ef"] == @["AbAbA", "CdCdC", "EfEfE"]
 assert 3 * @[@[@["nope"]]] == @[@[@["nopenopenope"]]]
 
+# sequences * sequences
+assert @[2, 3, 4] * @[5, 6, 7] == @[10, 18, 28]
+
+assert @[@[10, 20, 30], @[40, 50, 60]] * @[-10, 10] == @[@[-100, -200, -300], @[
+    400, 500, 600]]
+
+# multiplication-and-assignment
 (proc () =
   var x = "abc"
   x *= 3
