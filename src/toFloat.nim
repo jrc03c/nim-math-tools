@@ -2,6 +2,9 @@ import std/sequtils
 import std/strutils
 import std/sugar
 
+proc toFloat*(x: float): float =
+  return x
+
 proc toFloat*(x: bool): float =
   if x:
     return 1
@@ -43,6 +46,9 @@ proc toFloat*[T](x: seq[T]): seq[untyped] =
 
     else:
       return x.map(v => NaN)
+
+proc float*(x: float): float =
+  return toFloat(x)
 
 proc float*(x: bool): float =
   return toFloat(x)
