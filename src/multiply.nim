@@ -160,6 +160,24 @@ proc `*`*[T](a: int, b: seq[T]): seq[T] =
 # multiply sequences and sequences
 
 proc `*`*[T](a: seq[T], b: seq[T]): seq[T] =
+  ## Multiplies sequences `a` and `b` element-wise and returns the resulting sequence. For example:
+  ##
+  ## ```
+  ## @[2, 3, 4] * @[5, 6, 7]
+  ## # @[10, 18, 28]
+  ## ```
+  ##
+  ## Both sequences must have the same length, though they do not necessarily need to have the same *shape*. For example, a 3×2 nested sequence can be multiplied by a 1-dimensional sequence of length 3:
+  ##
+  ## ```
+  ## let a: seq[seq[int]] = @[@[1, 2], @[3, 4], @[5, 6]]
+  ## let b: seq[int] = @[7, 8, 9]
+  ## echo a * b
+  ## # @[@[7, 14], @[24, 32], @[45, 54]]
+  ## ```
+  ##
+  ## This example works because this library provides the ability to multiply (e.g.) a sequence of integers by another integer; so each of the three inner sequences in `a` can be multiplied element-wise by each of the three integers in `b`.
+
   if len(a) != len(b):
     raise newException(
       Exception,

@@ -219,7 +219,18 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#%2A%2Cseq%5BT%5D%2Cseq%5BT%5D"><span class="Identifier">`*`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
   <dd>
     
-    
+    <p>Multiplies sequences <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> and <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt> element-wise and returns the resulting sequence. For example:</p>
+<p><pre class="listing">
+<span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span> <span class="Operator">*</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">6</span><span class="Punctuation">,</span> <span class="DecNumber">7</span><span class="Punctuation">]</span>
+<span class="Comment"># @[10, 18, 28]</span></pre></p>
+<p>Both sequences must have the same length, though they do not necessarily need to have the same <em>shape</em>. For example, a 3×2 nested sequence can be multiplied by a 1-dimensional sequence of length 3:</p>
+<p><pre class="listing">
+<span class="Keyword">let</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">6</span><span class="Punctuation">]</span><span class="Punctuation">]</span>
+<span class="Keyword">let</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">7</span><span class="Punctuation">,</span> <span class="DecNumber">8</span><span class="Punctuation">,</span> <span class="DecNumber">9</span><span class="Punctuation">]</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span> <span class="Operator">*</span> <span class="Identifier">b</span>
+<span class="Comment"># @[@[7, 14], @[24, 32], @[45, 54]]</span></pre></p>
+<p>This example works because this library provides the ability to multiply (e.g.) a sequence of integers by another integer; so each of the three inner sequences in <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt> can be multiplied element-wise by each of the three integers in <tt class="docutils literal"><span class="pre"><span class="Identifier">b</span></span></tt>.</p>
+
     
   </dd>
 </div>
@@ -281,7 +292,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:15:20 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2024-04-20 14:31:00 UTC</small>
       </div>
     </div>
   </div>
