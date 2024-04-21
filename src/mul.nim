@@ -59,7 +59,13 @@ proc `*`*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
 proc `*`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   return mul(a, b)
 
-# NOTE: I haven't decided yet whether or not to keep these `*=` operators. They create restrictions on addition that aren't created by adding two things and assigning them to a new variable. (For example, `new float = int * float` works just fine, but `int *= float` does not.)
+proc `-`*(a: bool): bool =
+  return not a
+
+proc `-`*[T](a: seq[T]): seq[T] =
+  return a.map(v => -v)
+
+# NOTE: I haven't decided yet whether or not to keep these `*=` operators. They create restrictions on addition that aren't created by multiplying two things and assigning them to a new variable. (For example, `new float = int * float` works just fine, but `int *= float` does not.)
 
 proc `*=`*(a: var int, b: IntOrBool) =
   a = mul(a, b)

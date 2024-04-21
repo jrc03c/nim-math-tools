@@ -2,7 +2,7 @@ import rangeSeq
 import std/sequtils
 import std/sugar
 
-type NumberOrBool = (SomeNumber or bool)
+type NumOrBool = (SomeNumber or bool)
 type IntOrBool = (int or bool)
 
 proc add*(a: int, b: int): int =
@@ -35,13 +35,14 @@ proc add*(a: float, b: bool): float =
 proc add*(a: bool, b: float): float =
   return add(b, a)
 
-proc add*[T](a: seq[T], b: NumberOrBool): seq[untyped] =
+proc add*[T](a: seq[T], b: NumOrBool): seq[untyped] =
   return a.map(v => add(v, b))
 
-proc add*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
+proc add*[T](a: NumOrBool, b: seq[T]): seq[untyped] =
   return add(b, a)
 
 proc add*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
+  assert len(a) == len(b)
   return (0 -> len(a)-1).map(i => add(a[i], b[i]))
 
 proc `+`*(a: int, b: float): float =
@@ -50,10 +51,10 @@ proc `+`*(a: int, b: float): float =
 proc `+`*(a: float, b: int): float =
   return add(a, b)
 
-proc `+`*[T](a: seq[T], b: NumberOrBool): seq[untyped] =
+proc `+`*[T](a: seq[T], b: NumOrBool): seq[untyped] =
   return add(a, b)
 
-proc `+`*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
+proc `+`*[T](a: NumOrBool, b: seq[T]): seq[untyped] =
   return add(a, b)
 
 proc `+`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
@@ -70,13 +71,13 @@ proc `+=`*(a: var float, b: IntOrBool) =
 proc `+=`*(a: var seq[int], b: IntOrBool) =
   a = add(a, b)
 
-proc `+=`*(a: var seq[float], b: NumberOrBool) =
+proc `+=`*(a: var seq[float], b: NumOrBool) =
   a = add(a, b)
 
 proc `+=`*(a: var seq[int], b: seq[IntOrBool]) =
   a = add(a, b)
 
-proc `+=`*(a: var seq[float], b: seq[NumberOrBool]) =
+proc `+=`*(a: var seq[float], b: seq[NumOrBool]) =
   a = add(a, b)
 
 proc `+=`*[T, U](a: var seq[T], b: U) =
