@@ -42,3 +42,18 @@ proc add*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
 
 proc add*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   return (0 -> len(a)-1).map(i => add(a[i], b[i]))
+
+proc `+`*(a: int, b: float): float =
+  return add(a, b)
+
+proc `+`*(a: float, b: int): float =
+  return add(a, b)
+
+proc `+`*[T](a: seq[T], b: NumberOrBool): seq[untyped] =
+  return add(a, b)
+
+proc `+`*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
+  return add(a, b)
+
+proc `+`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
+  return add(a, b)
