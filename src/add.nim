@@ -1,53 +1,44 @@
+import rangeSeq
 import std/sequtils
-import std/strutils
 import std/sugar
 
-# concatenate strings and numbers
+proc add*(a: int, b: int): int =
+  return a + b
 
-proc `+`*(a: float, b: string): string =
-  return $a & b
+proc add*(a: float, b: float): float =
+  return a + b
 
-proc `+`*(a: string, b: float): string =
-  return a & $b
+proc add*(a: int, b: float): float =
+  return float(a) + b
 
-proc `+`*(a: int, b: string): string =
-  return $a & b
+proc add*(a: float, b: int): float =
+  return add(b, a)
 
-proc `+`*(a: string, b: int): string =
-  return a & $b
+proc add*(a: int, b: bool): int =
+  if b:
+    return a + 1
 
-# concatenate strings
+  return a
 
-proc `+`*(a: string, b: string): string =
-  return a & b
+proc add*(a: bool, b: int): int =
+  return add(b, a)
 
-# add sequences and numbers
+proc add*(a: float, b: bool): float =
+  if b:
+    return a + 1.0
 
-proc `+`*[T](a: seq[T], b: float): seq[T] =
-  return a.map(v => v + b)
+  return a
 
-proc `+`*[T](a: float, b: seq[T]): seq[T] =
-  return b.map(v => v + a)
+proc add*(a: bool, b: float): float =
+  return add(b, a)
 
-proc `+`*[T](a: seq[T], b: int): seq[T] =
-  return a.map(v => v + b)
+type NumberOrBool = (SomeNumber or bool)
 
-proc `+`*[T](a: int, b: seq[T]): seq[T] =
-  return b.map(v => v + a)
+proc add*[T](a: seq[T], b: NumberOrBool): seq[untyped] =
+  return a.map(v => add(v, b))
 
-# add sequences and sequences
+proc add*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
+  return add(b, a)
 
-proc `+`*[T](a: seq[T], b: seq[T]): seq[T] =
-  if len(a) != len(b):
-    raise newException(
-      Exception,
-      "Sequences of different lengths cannot be added together! ($# vs. $#)" %
-        [$len(a), $len(b)]
-    )
-
-  var temp: seq[T] = @[]
-
-  for i, v in a:
-    temp.add(v + b[i])
-
-  return temp
+proc add*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
+  return rangeSeq(0, len(a)-1).map(i => add(a[i], b[i]))
