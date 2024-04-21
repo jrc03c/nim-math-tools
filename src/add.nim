@@ -41,4 +41,4 @@ proc add*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
   return add(b, a)
 
 proc add*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
-  return rangeSeq(0, len(a)-1).map(i => add(a[i], b[i]))
+  return (0 -> len(a)-1).map(i => add(a[i], b[i]))
