@@ -2,6 +2,9 @@ import rangeSeq
 import std/sequtils
 import std/sugar
 
+type NumberOrBool = (SomeNumber or bool)
+type IntOrBool = (int or bool)
+
 proc add*(a: int, b: int): int =
   return a + b
 
@@ -32,8 +35,6 @@ proc add*(a: float, b: bool): float =
 proc add*(a: bool, b: float): float =
   return add(b, a)
 
-type NumberOrBool = (SomeNumber or bool)
-
 proc add*[T](a: seq[T], b: NumberOrBool): seq[untyped] =
   return a.map(v => add(v, b))
 
@@ -57,3 +58,29 @@ proc `+`*[T](a: NumberOrBool, b: seq[T]): seq[untyped] =
 
 proc `+`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   return add(a, b)
+
+# NOTE: I haven't decided yet whether or not to keep these `+=` operators. They create restrictions on addition that aren't created by adding two things and assigning them to a new variable. (For example, `new float = int + float` works just fine, but `int += float` does not.)
+
+proc `+=`*(a: var int, b: IntOrBool) =
+  a = add(a, b)
+
+proc `+=`*(a: var float, b: IntOrBool) =
+  a = add(a, b)
+
+proc `+=`*(a: var seq[int], b: IntOrBool) =
+  a = add(a, b)
+
+proc `+=`*(a: var seq[float], b: NumberOrBool) =
+  a = add(a, b)
+
+proc `+=`*(a: var seq[int], b: seq[IntOrBool]) =
+  a = add(a, b)
+
+proc `+=`*(a: var seq[float], b: seq[NumberOrBool]) =
+  a = add(a, b)
+
+proc `+=`*[T, U](a: var seq[T], b: U) =
+  a = add(a, b)
+
+proc `+=`*[T, U](a: var seq[T], b: seq[U]) =
+  a = add(a, b)
