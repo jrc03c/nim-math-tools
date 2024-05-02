@@ -50,7 +50,7 @@ proc `-`*(a: bool): bool =
 proc `-`*[T](a: seq[T]): seq[T] =
   return a.map(v => -v)
 
-# NOTE: I haven't decided yet whether or not to keep these `*=` operators. They create restrictions on addition that aren't created by multiplying two things and assigning them to a new variable. (For example, `new float = int * float` works just fine, but `int *= float` does not.)
+# NOTE: I haven't decided yet whether or not to keep these `*=` operators. They create restrictions on multiplication that aren't created by multiplying two things and assigning them to a new variable. (For example, `new float = int * float` works just fine, but `int *= float` does not.)
 
 proc `*=`*(a: var int, b: IntOrBool) =
   a = a * b
