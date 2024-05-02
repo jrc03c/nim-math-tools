@@ -56,7 +56,7 @@ proc `-`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
 
   return (0 -> len(a) - 1).map(i => a[i] - b[i])
 
-# NOTE: I haven't decided yet whether or not to keep these `-=` operators. They create restrictions on addition that aren't created by adding two things and assigning them to a new variable. (For example, `new float = int - float` works just fine, but `int -= float` does not.)
+# NOTE: I haven't decided yet whether or not to keep these `-=` operators. They create restrictions on subtraction that aren't created by subtracting two things and assigning them to a new variable. (For example, `new float = int - float` works just fine, but `int -= float` does not.)
 
 proc `-=`*(a: var int, b: IntOrBool) =
   a = a - b
