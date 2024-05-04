@@ -29,9 +29,6 @@ proc `/`*(a: bool, b: float): float =
 
   return 0.0
 
-proc `/`*(a: int, b: int): float =
-  return float(a) / float(b)
-
 proc `/`*(a: int, b: float): float =
   return float(a) / b
 
@@ -61,17 +58,27 @@ proc `/`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
 
 # NOTE: I haven't decided yet whether or not to keep these `/=` operators. They create restrictions on division that aren't created by dividing two things and assigning them to a new variable. (For example, `new float = int / float` works just fine, but `int /= float` does not.)
 
-proc `/=`*(a: var int, b: IntOrBool) =
+proc `/=`*(a: var int, b: int) =
+  a = a div b
+
+proc `/=`*(a: var int, b: bool) =
   a = a / b
 
 proc `/=`*(a: var float, b: IntOrBool) =
   a = a / b
 
-proc `/=`*(a: var seq[int], b: IntOrBool) =
-  a = a / b
+proc `/=`*(a: var seq[int], b: int) =
+  a = a.map(v => v div b)
+
+proc `/=`*(a: var seq[int], b: bool) =
+  a = a.map(v => v / b)
 
 proc `/=`*(a: var seq[float], b: NumOrBool) =
   a = a / b
+
+proc `/=`*(a: var seq[int], b: seq[int]) =
+  for i in 0 -> len(a) - 1:
+    a[i] = a[i] div b[i]
 
 proc `/=`*(a: var seq[int], b: seq[IntOrBool]) =
   a = a / b
