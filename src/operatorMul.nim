@@ -5,6 +5,12 @@ import reverse
 import std/sequtils
 import std/sugar
 
+proc `*`*(a: bool, b: bool): int =
+  if a and b:
+    return 1
+
+  return 0
+
 proc `*`*(a: int, b: bool): int =
   if b:
     return a
