@@ -1,9 +1,19 @@
 import operatorRangeSeq
 import std/sequtils
+import std/strutils
 import std/sugar
 
-type NumOrBool = (SomeNumber or bool)
-type IntOrBool = (int or bool)
+proc `-`*(a: bool, b: bool): int =
+  if a:
+    if b:
+      return 0
+
+    return 1
+
+  if b:
+    return -1
+
+  return 0
 
 proc `-`*(a: int, b: bool): int =
   if b:
@@ -35,16 +45,42 @@ proc `-`*(a: int, b: float): float =
 proc `-`*(a: float, b: int): float =
   return a - float(b)
 
-proc `-`*[T](a: seq[T], b: NumOrBool): seq[untyped] =
-  when T is seq or T is NumOrBool:
+proc `-`*(a: string, b: string): string =
+  let index = a.find(b)
+
+  if index > -1:
+    return a[0 .. index - 1] & a[index + len(b) .. len(a) - 1]
+
+  return a
+
+proc `-`*(a: string, b: bool): string =
+  return a - $b
+
+proc `-`*(a: bool, b: string): string =
+  return $a - b
+
+proc `-`*(a: string, b: int): string =
+  return a - $b
+
+proc `-`*(a: int, b: string): string =
+  return $a - b
+
+proc `-`*(a: string, b: float): string =
+  return a - $b
+
+proc `-`*(a: float, b: string): string =
+  return $a - b
+
+proc `-`*[T](a: seq[T], b: (bool or int or float)): seq[untyped] =
+  when T is seq or T is (bool or int or float):
     return a.map(v => v - b)
 
   else:
     raise newException(Exception, "$# and $# types cannot be subtracted from one another!" %
           [T, typeof b])
 
-proc `-`*[T](a: NumOrBool, b: seq[T]): seq[untyped] =
-  when T is seq or T is NumOrBool:
+proc `-`*[T](a: (bool or int or float), b: seq[T]): seq[untyped] =
+  when T is seq or T is (bool or int or float):
     return b.map(v => a - v)
 
   else:
@@ -58,22 +94,25 @@ proc `-`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
 
 # NOTE: I haven't decided yet whether or not to keep these `-=` operators. They create restrictions on subtraction that aren't created by subtracting two things and assigning them to a new variable. (For example, `new float = int - float` works just fine, but `int -= float` does not.)
 
-proc `-=`*(a: var int, b: IntOrBool) =
+proc `-=`*(a: var int, b: (bool or int)) =
   a = a - b
 
-proc `-=`*(a: var float, b: IntOrBool) =
+proc `-=`*(a: var float, b: (bool or int)) =
   a = a - b
 
-proc `-=`*(a: var seq[int], b: IntOrBool) =
+proc `-=`*(a: var string, b: (bool or int or float or string)) =
   a = a - b
 
-proc `-=`*(a: var seq[float], b: NumOrBool) =
+proc `-=`*(a: var seq[int], b: (bool or int)) =
   a = a - b
 
-proc `-=`*(a: var seq[int], b: seq[IntOrBool]) =
+proc `-=`*(a: var seq[float], b: (bool or int or float)) =
   a = a - b
 
-proc `-=`*(a: var seq[float], b: seq[NumOrBool]) =
+proc `-=`*(a: var seq[int], b: seq[(bool or int)]) =
+  a = a - b
+
+proc `-=`*(a: var seq[float], b: seq[(bool or int or float)]) =
   a = a - b
 
 proc `-=`*[T, U](a: var seq[T], b: U) =
