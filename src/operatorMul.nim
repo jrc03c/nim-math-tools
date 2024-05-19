@@ -107,7 +107,7 @@ proc `*`*[T](a: (bool or int or float or string), b: seq[T]): seq[untyped] =
 
   else:
     raise newException(Exception, "$# values cannot be multiplied by $# values!" %
-          [typeof a, T])
+        [typeof a, T])
 
 proc `*`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   return (0 -> len(a) - 1).map(i => a[i] * b[i])
