@@ -3,6 +3,18 @@ import operatorRangeSeq
 import std/sequtils
 import std/sugar
 
+proc `/`*(a: bool, b: bool): int =
+  if a:
+    if b:
+      return 1
+
+    raise newException(Exception, "Boolean division by 0 is not possible!")
+
+  if b:
+    return 0
+
+  raise newException(Exception, "Boolean division by 0 is not possible!")
+
 proc `/`*(a: int, b: bool): int =
   if b:
     return a
