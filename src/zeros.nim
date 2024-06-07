@@ -2,5 +2,5 @@ import ndarray
 
 export ndarray
 
-template zeros*(shape: openArray[int]): untyped =
+template zeros*(shape: seq[int]): untyped =
   ndarray(shape, float)

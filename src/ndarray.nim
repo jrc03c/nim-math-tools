@@ -1,4 +1,4 @@
-template ndarray*(shape: openArray[int], T: typedesc): untyped =
+template ndarray*(shape: seq[int], T: typedesc): untyped =
   when len(shape) == 0:
     newSeq[T]()
 
@@ -14,7 +14,7 @@ template ndarray*(shape: openArray[int], T: typedesc): untyped =
     var temp: seq[seq[T]] = @[]
 
     for i in 0 .. shape[0] - 1:
-      temp.add(ndarray([shape[1]], T))
+      temp.add(ndarray(@[shape[1]], T))
 
     temp
 
