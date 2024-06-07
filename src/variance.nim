@@ -1,6 +1,9 @@
 import flatten
 import mean
 
+export flatten
+export mean
+
 proc variance*[T](x: seq[T]): float =
   let xflat = flatten(x)
   let m = mean(xflat)
