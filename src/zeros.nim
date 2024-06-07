@@ -1,6 +1,6 @@
 template zeros*(shape: openArray[int]): untyped =
   when len(shape) == 0:
-    return newSeq[float]()
+    newSeq[float]()
 
   when len(shape) == 1:
     var temp: seq[float] = @[]
