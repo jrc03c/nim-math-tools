@@ -1,0 +1,16 @@
+import std/algorithm
+
+proc defaultSortCmp*[T](a: T, b: T): int =
+  if a < b:
+    return -1
+
+  if b < a:
+    return 1
+
+  return 0
+
+proc sort*[T](
+  x: seq[T],
+  fn: proc(a: T, b: T): int = defaultSortCmp
+): seq[untyped] =
+  return sorted(x, fn)
