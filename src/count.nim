@@ -1,20 +1,20 @@
-import innerType
-import set
+import flatten
 import std/tables
 
-export innerType
-export set
+export flatten
 export tables
 
 proc count*[T](x: seq[T]): TableRef[untyped, int] =
-  type t = innerType(x)
-  let xset = set[T](x)
-  var table = newTable[t, int]()
+  when T is seq:
+    return count(flatten(x))
 
-  for v in xset:
-    if not table.contains(v):
-      table[v] = 0
+  else:
+    var table = newTable[T, int]()
 
-    table[v] += 1
+    for v in x:
+      if not table.hasKey(v):
+        table[v] = 0
 
-  return table
+      table[v] += 1
+
+    return table
