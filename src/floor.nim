@@ -1,17 +1,7 @@
-import math
-import std/sequtils
-import std/sugar
+from math import floor
+import apply
 
-export math.floor
-
-proc floor*(x: int): int =
-  return x
-
-proc floor*(x: bool): float =
-  if x:
-    return 1.0
-
-  return 0.0
+export floor
 
 proc floor*[T](x: seq[T]): seq[untyped] =
-  return x.map(v => floor(v))
+  return apply(x, proc(v: float): float = floor(v))
