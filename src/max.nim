@@ -1,123 +1,140 @@
-import std/sequtils
-import std/sugar
+# import std/sequtils
+# import std/sugar
 
-proc max*(a: bool, b: bool): bool =
-  if a:
-    return a
+# proc max*(a: bool, b: bool): bool =
+#   if a:
+#     return a
 
-  return b
+#   return b
 
-proc max*(a: bool, b: int): int =
-  if a:
-    if b > 1:
-      return b
+# proc max*(a: bool, b: int): int =
+#   if a:
+#     if b > 1:
+#       return b
 
-    return 1
+#     return 1
 
-  if b > 0:
-    return b
+#   if b > 0:
+#     return b
 
-  return 0
+#   return 0
 
-proc max*(a: int, b: bool): int =
-  if b:
-    if a > 1:
-      return a
+# proc max*(a: int, b: bool): int =
+#   if b:
+#     if a > 1:
+#       return a
 
-    return 1
+#     return 1
 
-  if a > 0:
-    return a
+#   if a > 0:
+#     return a
 
-  return 0
+#   return 0
 
-proc max*(a: float, b: bool): float =
-  if b:
-    if a > 1.0:
-      return a
+# proc max*(a: float, b: bool): float =
+#   if b:
+#     if a > 1.0:
+#       return a
 
-    return 1.0
+#     return 1.0
 
-  if a > 0.0:
-    return a
+#   if a > 0.0:
+#     return a
 
-  return 0.0
+#   return 0.0
 
-proc max*(a: bool, b: float): float =
-  if a:
-    if b > 1.0:
-      return b
+# proc max*(a: bool, b: float): float =
+#   if a:
+#     if b > 1.0:
+#       return b
 
-    return 1.0
+#     return 1.0
 
-  if b > 0.0:
-    return b
+#   if b > 0.0:
+#     return b
 
-  return 0.0
+#   return 0.0
 
-proc max*(a: float, b: int): float =
-  return max(a, float(b))
+# proc max*(a: float, b: int): float =
+#   return max(a, float(b))
 
-proc max*(a: int, b: float): float =
-  return max(float(a), b)
+# proc max*(a: int, b: float): float =
+#   return max(float(a), b)
 
-proc max*(a: string, b: string): string =
-  if a > b:
-    return a
+# proc max*(a: string, b: string): string =
+#   if a > b:
+#     return a
 
-  return b
+#   return b
 
-proc max*(x: seq[bool]): bool =
-  if len(x) == 0:
-    return false
+# proc max*(x: seq[bool]): bool =
+#   if len(x) == 0:
+#     return false
 
-  var m = x[0]
+#   var m = x[0]
 
-  for v in x:
-    if v:
-      m = v
+#   for v in x:
+#     if v:
+#       m = v
 
-  return m
+#   return m
 
-proc max*(x: seq[int]): int =
-  if len(x) == 0:
-    return 0
+# proc max*(x: seq[int]): int =
+#   if len(x) == 0:
+#     return 0
 
-  var m = low(int)
+#   var m = low(int)
 
-  for v in x:
-    if v > m:
-      m = v
+#   for v in x:
+#     if v > m:
+#       m = v
 
-  return m
+#   return m
 
-proc max*(x: seq[float]): float =
-  if len(x) == 0:
-    return NaN
+# proc max*(x: seq[float]): float =
+#   if len(x) == 0:
+#     return NaN
 
-  var m = -Inf
+#   var m = -Inf
 
-  for v in x:
-    if v > m:
-      m = v
+#   for v in x:
+#     if v > m:
+#       m = v
 
-  return m
+#   return m
 
-proc max*(x: seq[string]): string =
-  if len(x) == 0:
-    return ""
+# proc max*(x: seq[string]): string =
+#   if len(x) == 0:
+#     return ""
 
-  var m = x[0]
+#   var m = x[0]
 
-  for v in x:
-    if v > m:
-      m = v
+#   for v in x:
+#     if v > m:
+#       m = v
 
-  return m
+#   return m
 
-proc max*[T](x: seq[T]): (bool or int or float or string) =
-  when T is (bool or int or float or string):
-    return max(x)
+# proc max*[T](x: seq[T]): (bool or int or float or string) =
+#   when T is (bool or int or float or string):
+#     return max(x)
+
+#   else:
+#     return max(x.map(v => max(v)))
+
+import flatten
+
+export flatten
+
+template max*[T](x: seq[T]): untyped =
+  when T is seq:
+    max(flatten(x))
 
   else:
-    return max(x.map(v => max(v)))
+    var highest = low(T)
+
+    for v in x:
+      if v > highest:
+        highest = v
+
+    highest
