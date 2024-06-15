@@ -1,5 +1,7 @@
 import apply
 
+export apply
+
 proc chop*(x: float, threshold: float = 0.0000000001): float =
   if abs(x) < threshold:
     return 0.0
