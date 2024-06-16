@@ -1,7 +1,13 @@
-from math import ln, log, log10
+import math
 import apply
 
-export ln, log, log10
+export apply
+export ln
+export log
+export log10
+
+proc log*(x: float): float =
+  return math.log(x, 10.0)
 
 proc ln*[T](x: seq[T]): seq[untyped] =
   return apply(x, proc(v: float): float = ln(v))

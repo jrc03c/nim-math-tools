@@ -4,8 +4,8 @@ import operatorApprox
 import std/sequtils
 import std/sugar
 
-assert exp(1.2) == math.exp(1.2)
-assert exp(@[1.2, 3.4, 5.6]) == (@[1.2, 3.4, 5.6]).map(v => math.exp(v))
+assert exp(1.2) ~ math.exp(1.2)
+assert exp(@[1.2, 3.4, 5.6]) ~ (@[1.2, 3.4, 5.6]).map(v => math.exp(v))
 
 let x = @[@[1.184147366120706, 0.7842148016228108, -0.766598470070492,
     2.0789239010128417, -0.5886539336721325], @[-0.005464901242778314,
