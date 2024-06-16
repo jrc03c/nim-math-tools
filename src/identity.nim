@@ -11,3 +11,6 @@ template identity*(n: int, T: typedesc = float): seq[seq[T]] =
     temp[i][i] = T(1.0)
 
   temp
+
+template eye*(n: int, T: typedesc = float): seq[seq[T]] =
+  identity(n, T)
