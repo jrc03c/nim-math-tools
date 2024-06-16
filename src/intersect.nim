@@ -4,9 +4,9 @@ import set
 export innerType
 export set
 
-proc intersect*[T](a: seq[T], b: seq[T]): seq[untyped] =
+proc intersect*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   let aset = set[T](a)
-  let bset = set[T](b)
+  let bset = set[U](b)
   var temp: seq[innerType(a)] = @[]
 
   for v in aset:
