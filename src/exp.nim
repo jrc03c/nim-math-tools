@@ -1,6 +1,7 @@
 from math import exp
 import apply
 
+export apply
 export exp
 
 proc exp*[T](x: seq[T]): seq[untyped] =
