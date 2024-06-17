@@ -5,6 +5,7 @@ import operatorRangeSeq
 import std/sequtils
 import std/sugar
 
+export apply
 export ndarray
 
 proc random*(): float =
