@@ -2,5 +2,9 @@ import ndarray
 
 export ndarray
 
-template zeros*(shape: seq[int]): untyped =
-  ndarray(shape, float)
+template zeros*[T](shape: T): untyped =
+  when T is seq[int]:
+    ndarray(shape, float)
+
+  else:
+    ndarray(@[shape], float)

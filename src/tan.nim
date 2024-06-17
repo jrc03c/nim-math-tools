@@ -1,6 +1,7 @@
 from math import tan
 import apply
 
+export apply
 export tan
 
 proc tan*[T](x: seq[T]): seq[untyped] =

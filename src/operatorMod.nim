@@ -11,7 +11,7 @@ proc `mod`*[T](a: SomeNumber, b: seq[T]): seq[untyped] =
 
 proc `mod`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   assert len(a) == len(b)
-  return (0 -> len(a) - 1).map(i => a[i] mod b[i])
+  return (0 ... len(a) - 1).map(i => a[i] mod b[i])
 
 template `%`*(a: typed, b: typed): untyped =
   a mod b

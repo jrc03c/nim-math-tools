@@ -1,6 +1,7 @@
 from math import round
 import apply
 
+export apply
 export round
 
 proc round*[T](x: seq[T]): seq[untyped] =

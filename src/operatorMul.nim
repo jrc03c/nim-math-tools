@@ -110,7 +110,7 @@ proc `*`*[T](a: (bool or int or float or string), b: seq[T]): seq[untyped] =
         [typeof a, T])
 
 proc `*`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
-  return (0 -> len(a) - 1).map(i => a[i] * b[i])
+  return (0 ... len(a) - 1).map(i => a[i] * b[i])
 
 proc `-`*(x: bool): bool =
   return not x

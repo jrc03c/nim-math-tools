@@ -92,7 +92,7 @@ proc `/`*(a: string, b: seq[(bool or int or float)]): seq[string] =
 proc `/`*(a: seq[string], b: seq[(bool or int or float)]): seq[string] =
   assert len(a) == len(b), "Two sequences can only be divided by one another if they have the same length!"
 
-  return (0 -> len(a)-1).map(i => a[i] / b[i])
+  return (0 ... len(a)-1).map(i => a[i] / b[i])
 
 proc `/`*[T, U](a: seq[T], b: U): seq[untyped] =
   return a.map(v => v / b)
@@ -103,7 +103,7 @@ proc `/`*[T, U](a: T, b: seq[U]): seq[untyped] =
 proc `/`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   assert len(a) == len(b), "Two sequences can only be divided by one another if they have the same length!"
 
-  return (0 -> len(a)-1).map(i => a[i] / b[i])
+  return (0 ... len(a)-1).map(i => a[i] / b[i])
 
 # NOTE: I haven't decided yet whether or not to keep these `/=` operators. They create restrictions on division that aren't created by dividing two things and assigning them to a new variable. (For example, `new float = int / float` works just fine, but `int /= float` does not.)
 
@@ -129,7 +129,7 @@ proc `/=`*(a: var seq[float], b: (bool or int or float)) =
   a = a / b
 
 proc `/=`*(a: var seq[int], b: seq[int]) =
-  for i in 0 -> len(a) - 1:
+  for i in 0 ... len(a) - 1:
     a[i] = a[i] div b[i]
 
 proc `/=`*(a: var seq[int], b: seq[(bool or int)]) =

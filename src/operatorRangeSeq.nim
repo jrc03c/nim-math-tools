@@ -32,8 +32,5 @@ proc rangeSeq*(a: int, b: int, step: int = 1): seq[int] =
 
     return temp
 
-proc `->`*(a: int, b: int): seq[int] =
-  return rangeSeq(a, b)
-
 proc `...`*(a: int, b: int): seq[int] =
   return rangeSeq(a, b)

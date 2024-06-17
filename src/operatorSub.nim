@@ -90,7 +90,7 @@ proc `-`*[T](a: (bool or int or float), b: seq[T]): seq[untyped] =
 proc `-`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   assert len(a) == len(b), "Two sequences can only be subtracted from one another if they have the same length!"
 
-  return (0 -> len(a) - 1).map(i => a[i] - b[i])
+  return (0 ... len(a) - 1).map(i => a[i] - b[i])
 
 # NOTE: I haven't decided yet whether or not to keep these `-=` operators. They create restrictions on subtraction that aren't created by subtracting two things and assigning them to a new variable. (For example, `new float = int - float` works just fine, but `int -= float` does not.)
 

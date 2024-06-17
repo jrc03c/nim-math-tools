@@ -23,4 +23,4 @@ proc `**`*[T](a: SomeNumber, b: seq[T]): seq[untyped] =
 
 proc `**`*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   assert len(a) == len(b)
-  return (0 -> len(a) - 1).map(i => a[i] ** b[i])
+  return (0 ... len(a) - 1).map(i => a[i] ** b[i])
