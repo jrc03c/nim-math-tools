@@ -1,4 +1,4 @@
-template ndarray*(shape: seq[int], T: typedesc): untyped =
+template ndarray*(shape: seq[int], T: typedesc = float): untyped =
   when len(shape) == 0:
     newSeq[T]()
 
@@ -26,3 +26,6 @@ template ndarray*(shape: seq[int], T: typedesc): untyped =
       temp.add(row)
 
     temp
+
+template ndarray*(n: int, T: typedesc = float): untyped =
+  ndarray(@[n], T)
