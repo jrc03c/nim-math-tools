@@ -11,6 +11,9 @@ proc defaultSortCmp*[T](a: T, b: T): int =
 
 proc sort*[T](
   x: seq[T],
-  fn: proc(a: T, b: T): int = defaultSortCmp
+  fn: proc(a: T, b: T): int
 ): seq[untyped] =
   return sorted(x, fn)
+
+proc sort*[T](x: seq[T]): seq[untyped] =
+  return sort(x, defaultSortCmp)
