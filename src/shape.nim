@@ -1,21 +1,11 @@
-import std/typetraits
+# NOTE: This function does not detect jaggedness; It only looks at the 0th
+# element at each level of depth in a sequence!
 
 proc shape*[T](x: seq[T]): seq[int] =
-  var temp: seq[int] = @[len(x)]
+  when T is seq:
+    var temp: seq[int] = @[len(x)]
+    temp.add(shape(x[0]))
+    return temp
 
-  when elementType(x) is seq:
-    let s = shape(x[0])
-    var allChildShapesAreIdentical = true
-
-    for i in 1 .. len(x) - 1:
-      if shape(x[i]) != s:
-        allChildShapesAreIdentical = false
-        break
-
-    if allChildShapesAreIdentical:
-      temp.add(s)
-
-    else:
-      temp.add(-1)
-
-  return temp
+  else:
+    return @[len(x)]

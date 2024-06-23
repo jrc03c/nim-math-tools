@@ -1,6 +1,6 @@
 import shape
 
-assert shape(@[]) == @[0]
+assert shape(newSeq[int]()) == @[0]
 assert shape(@[2, 3, 4]) == @[3]
 assert shape(@[@[2, 3, 4], @[5, 6, 7]]) == @[2, 3]
 
