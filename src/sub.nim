@@ -1,4 +1,4 @@
-import operatorSub
+import operator_sub
 
 proc sub*(a: bool, b: (bool or int)): int =
   return a - b

@@ -1,7 +1,7 @@
-import innerType
+import inner_type
 import set
 
-export innerType
+export inner_type
 export set
 
 # NOTE: This function only finds the elements in `a` that are not in `b`; it
@@ -10,7 +10,7 @@ export set
 proc diff*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
   let aset = set[T](a)
   let bset = set[U](b)
-  var temp: seq[innerType(a)] = @[]
+  var temp: seq[inner_type(a)] = @[]
 
   for v in aset:
     if not bset.contains(v):
@@ -18,8 +18,8 @@ proc diff*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
 
   return temp
 
-proc diffBoth*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
-  var temp: seq[innerType(a)] = @[]
+proc diff_both*[T, U](a: seq[T], b: seq[U]): seq[untyped] =
+  var temp: seq[inner_type(a)] = @[]
   temp.add(diff(a, b))
   temp.add(diff(b, a))
   return temp

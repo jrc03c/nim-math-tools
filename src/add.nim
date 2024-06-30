@@ -1,4 +1,4 @@
-import operatorAdd
+import operator_add
 
 proc add*(a: bool, b: (bool or int)): int =
   return a + b

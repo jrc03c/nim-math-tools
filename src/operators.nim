@@ -1,6 +1,6 @@
-include operatorAdd
-include operatorApprox
-include operatorDiv
-include operatorMul
-include operatorRangeSeq
-include operatorSub
+include operator_add
+include operator_approx
+include operator_div
+include operator_mul
+include operator_range_seq
+include operator_sub

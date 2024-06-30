@@ -48,7 +48,7 @@ proc dot*(
   a: seq[seq[SomeNumber]],
   b: seq[seq[SomeNumber]]
 ): seq[seq[SomeNumber]] =
-  var temp: seq[seq[SomeNumber]] = newSeqWith(1, newSeq[SomeNumber]())
+  var temp: seq[seq[SomeNumber]] = new_seqWith(1, new_seq[SomeNumber]())
 
   if len(a) == 0 or len(a[0]) == 0 or len(b) == 0 or len(b[0]) == 0:
     return temp

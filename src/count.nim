@@ -9,10 +9,10 @@ proc count*[T](x: seq[T]): TableRef[untyped, int] =
     return count(flatten(x))
 
   else:
-    var table = newTable[T, int]()
+    var table = new_table[T, int]()
 
     for v in x:
-      if not table.hasKey(v):
+      if not table.has_key(v):
         table[v] = 0
 
       table[v] += 1

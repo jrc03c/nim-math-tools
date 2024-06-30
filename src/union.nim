@@ -1,9 +1,9 @@
 import flatten
-import innerType
+import inner_type
 import set
 
 export flatten
-export innerType
+export inner_type
 
 template union*[T, U](a: seq[T], b: seq[U]): untyped =
   when T is seq:

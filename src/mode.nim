@@ -12,11 +12,11 @@ proc mode*[T](x: seq[T]): seq[untyped] =
 
   else:
     let counts = count(x)
-    let maxCount = max(toSeq(counts.values))
+    let max_count = max(to_seq(counts.values))
     var temp: seq[T] = @[]
 
     for v in counts.keys:
-      if counts[v] == maxCount:
+      if counts[v] == max_count:
         temp.add(v)
 
     sort(temp)

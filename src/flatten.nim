@@ -1,6 +1,6 @@
-import innerType
+import inner_type
 
-export innerType
+export inner_type
 
 proc flatten*[T](x: T): seq[untyped] =
   var temp: seq[T] = @[x]
@@ -8,7 +8,7 @@ proc flatten*[T](x: T): seq[untyped] =
 
 proc flatten*[T](x: seq[T]): seq[untyped] =
   when T is seq:
-    var temp: seq[innerType(x)] = @[]
+    var temp: seq[inner_type(x)] = @[]
 
     for v in x:
       temp.add(flatten(v))

@@ -1,4 +1,4 @@
-import operatorDiv
+import operator_div
 import std/sequtils
 import std/sugar
 

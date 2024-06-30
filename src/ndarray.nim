@@ -1,6 +1,6 @@
 template ndarray*(shape: seq[int], T: typedesc = float): untyped =
   when len(shape) == 0:
-    newSeq[T]()
+    new_seq[T]()
 
   when len(shape) == 1:
     var temp: seq[T] = @[]

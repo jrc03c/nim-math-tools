@@ -1,9 +1,9 @@
 import apply
-import innerType
+import inner_type
 import math
 
 export apply
-export innerType
+export inner_type
 export math.floor
 
 proc floor*(x: bool): float =
@@ -13,5 +13,5 @@ proc floor*(x: bool): float =
   return 0.0
 
 proc floor*[T](x: seq[T]): seq[untyped] =
-  type t = innerType(x)
+  type t = inner_type(x)
   return apply(x, proc(v: t): float = floor(v))

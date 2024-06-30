@@ -1,4 +1,4 @@
-import operatorMul
+import operator_mul
 
 proc mul*(a: bool, b: bool): int =
   return a * b

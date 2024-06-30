@@ -1,4 +1,4 @@
-import operatorRangeSeq
+import operator_range_seq
 import std/sequtils
 import std/sugar
 

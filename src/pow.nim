@@ -1,6 +1,6 @@
-import operatorPow
+import operator_pow
 
-export operatorPow
+export operator_pow
 
 template pow*[T, U](a: T, b: U): untyped =
   a ** b

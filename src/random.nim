@@ -1,7 +1,7 @@
 from std/random import rand
 import apply
 import ndarray
-import operatorRangeSeq
+import operator_range_seq
 import std/sequtils
 import std/sugar
 

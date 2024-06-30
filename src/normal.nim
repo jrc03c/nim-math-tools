@@ -1,5 +1,5 @@
 import apply
-import operatorRangeSeq
+import operator_range_seq
 import random
 import std/math
 import std/sequtils
@@ -10,9 +10,9 @@ export apply
 export zeros
 
 proc normal*(): float =
-  let u1 = random()
-  let u2 = random()
-  return math.sqrt(-2.0 * math.ln(u1)) * math.cos(2.0 * math.PI * u2)
+  let u_1 = random()
+  let u_2 = random()
+  return math.sqrt(-2.0 * math.ln(u_1)) * math.cos(2.0 * math.PI * u_2)
 
 proc normal*(n: int): seq[float] =
   return (0 ... n - 1).map(i => normal())

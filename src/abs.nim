@@ -1,8 +1,8 @@
 import apply
-import innerType
+import inner_type
 
 export apply
-export innerType
+export inner_type
 
 proc abs*(x: bool): float =
   if x:
@@ -11,7 +11,7 @@ proc abs*(x: bool): float =
   return 0
 
 proc abs*[T](x: seq[T]): seq[untyped] =
-  type t = innerType(x)
+  type t = inner_type(x)
 
   when t is bool:
     return apply(x, proc(v: bool): float = abs(v))
