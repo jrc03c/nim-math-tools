@@ -15,10 +15,10 @@ assert to_float(@[@[-5, -6, -7], @[-8, -9, -10]]) == @[@[-5.0, -6.0, -7.0], @[
 
 assert to_float(@[@[@[@[@[true, false]]]]]) == @[@[@[@[@[1.0, 0.0]]]]]
 
-assert is_na_n(to_float("nope"))
+assert is_nan(to_float("nope"))
 
 for v in to_float(@["a", "b", "c"]):
-  assert is_na_n(v)
+  assert is_nan(v)
 
 assert float(0) == 0.0
 assert float(1) == 1.0
@@ -34,7 +34,7 @@ assert float(@[@[-5, -6, -7], @[-8, -9, -10]]) == @[@[-5.0, -6.0, -7.0], @[
 
 assert float(@[@[@[@[@[true, false]]]]]) == @[@[@[@[@[1.0, 0.0]]]]]
 
-assert is_na_n(float("nope"))
+assert is_nan(float("nope"))
 
 for v in float(@["a", "b", "c"]):
-  assert is_na_n(v)
+  assert is_nan(v)

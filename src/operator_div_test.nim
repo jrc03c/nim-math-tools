@@ -1,4 +1,4 @@
-from math import is_na_n
+from math import is_nan
 import operator_approx
 import operator_div
 
@@ -72,7 +72,7 @@ assert @[@["g", "gg"], @["hhh", "hhhh"], @["iiiii", "iiiiii"]] / @[@[1, 2], @[3,
 (proc () =
   var x: float = 3
   x /= false
-  assert is_na_n(x)
+  assert is_nan(x)
 )()
 
 (proc () =
@@ -84,7 +84,7 @@ assert @[@["g", "gg"], @["hhh", "hhhh"], @["iiiii", "iiiiii"]] / @[@[1, 2], @[3,
 (proc () =
   var x = 3.4
   x /= false
-  assert is_na_n(x)
+  assert is_nan(x)
 )()
 
 (proc () =
@@ -133,7 +133,7 @@ assert @[@["g", "gg"], @["hhh", "hhhh"], @["iiiii", "iiiiii"]] / @[@[1, 2], @[3,
   var x = @[2.3, 4.5, 6.7]
   x /= @[true, false, true]
   assert x[0] ~ 2.3
-  assert is_na_n(x[1])
+  assert is_nan(x[1])
   assert x[2] ~ 6.7
 )()
 

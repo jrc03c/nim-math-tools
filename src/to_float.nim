@@ -7,9 +7,9 @@ proc to_float*(x: float): float =
 
 proc to_float*(x: bool): float =
   if x:
-    return 1
+    return 1.0
 
-  return 0
+  return 0.0
 
 proc to_float*(x: string): float =
   try:
