@@ -1,4 +1,5 @@
 import flatten
+import std/sequtils
 
 export flatten
 
@@ -24,8 +25,6 @@ proc combinations*[T](x: seq[T], r: int): seq[seq[T]] =
       let children = combinations(after, r - 1)
 
       for child in children:
-        var subtemp: seq[T] = @[v]
-        subtemp.add(child)
-        temp.add(subtemp)
+        temp.add(concat(@[v], child))
 
     return temp
