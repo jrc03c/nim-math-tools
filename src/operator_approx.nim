@@ -1,4 +1,15 @@
+import std/math
+
 proc approx*(a: float, b: float, tol: float = 0.00001): bool =
+  if isNaN(a):
+    if isNaN(b):
+      return true
+
+    return false
+
+  if isNaN(b):
+    return false
+
   return abs(a - b) < tol
 
 proc approx*(a: int, b: int, tol: int = 1): bool =
