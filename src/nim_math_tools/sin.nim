@@ -1,8 +1,8 @@
-from math import sin
 import apply
+import std/math
 
 export apply
-export sin
+export math.sin
 
 proc sin*[T](x: seq[T]): seq[untyped] =
-  return apply(x, proc(v: float): float = sin(v))
+  return apply(x, proc(v: float): float = math.sin(v))

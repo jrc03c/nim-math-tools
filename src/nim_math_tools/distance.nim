@@ -1,8 +1,8 @@
-from std/math import sqrt
 import flatten
+import std/math
 
 export flatten
-export sqrt
+export math.sqrt
 
 proc distance*[T](x: seq[T], y: seq[T]): float =
   when T is seq:
@@ -15,4 +15,4 @@ proc distance*[T](x: seq[T], y: seq[T]): float =
     for i in 0 .. len(x) - 1:
       d += (x[i] - y[i]) * (x[i] - y[i])
 
-    return sqrt(d)
+    return math.sqrt(d)

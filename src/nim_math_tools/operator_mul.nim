@@ -1,7 +1,7 @@
-from math import floor, round
 import floor
 import operator_range_seq
 import reverse
+import round
 import std/sequtils
 import std/sugar
 

@@ -1,8 +1,8 @@
-from math import arctan
 import apply
+import std/math
 
 export apply
-export arctan
+export math.arctan
 
 proc arctan*[T](x: seq[T]): seq[untyped] =
-  return apply(x, proc(v: float): float = arctan(v))
+  return apply(x, proc(v: float): float = math.arctan(v))

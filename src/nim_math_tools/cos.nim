@@ -1,8 +1,8 @@
-from math import cos
 import apply
+import std/math
 
 export apply
-export cos
+export math.cos
 
 proc cos*[T](x: seq[T]): seq[untyped] =
-  return apply(x, proc(v: float): float = cos(v))
+  return apply(x, proc(v: float): float = math.cos(v))
