@@ -1,0 +1,2 @@
+nimTitle	mode	nim_math_tools/mode.html	module src/nim_math_tools/mode		0
+nim	mode	nim_math_tools/mode.html#mode,seq[T]	proc mode[T](x: seq[T]): seq[untyped]		9

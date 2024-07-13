@@ -1,0 +1,4 @@
+nimTitle	ceil	nim_math_tools/ceil.html	module src/nim_math_tools/ceil		0
+nim	ceil	nim_math_tools/ceil.html#ceil,bool	proc ceil(x: bool): float		7
+nim	ceil	nim_math_tools/ceil.html#ceil,seq[T]	proc ceil[T](x: seq[T]): seq[untyped]		13
+nimgrp	ceil	nim_math_tools/ceil.html#ceil-procs-all	proc		7

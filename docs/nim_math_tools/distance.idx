@@ -1,0 +1,2 @@
+nimTitle	distance	nim_math_tools/distance.html	module src/nim_math_tools/distance		0
+nim	distance	nim_math_tools/distance.html#distance,seq[T],seq[T]	proc distance[T](x: seq[T]; y: seq[T]): float		7

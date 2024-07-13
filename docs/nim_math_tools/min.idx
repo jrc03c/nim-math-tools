@@ -1,0 +1,6 @@
+nimTitle	min	nim_math_tools/min.html	module src/nim_math_tools/min		0
+nim	min	nim_math_tools/min.html#min.t,seq[T]	template min[T](x: seq[T]): untyped		5
+nim	min	nim_math_tools/min.html#min,int,int	proc min(a: int; b: int): int		18
+nim	min	nim_math_tools/min.html#min,int,float	proc min(a: int; b: float): float		24
+nim	min	nim_math_tools/min.html#min,float,int	proc min(a: float; b: int): float		32
+nimgrp	min	nim_math_tools/min.html#min-procs-all	proc		18

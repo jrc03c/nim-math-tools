@@ -1,0 +1,6 @@
+nimTitle	log	nim_math_tools/log.html	module src/nim_math_tools/log		0
+nim	log	nim_math_tools/log.html#log,float	proc log(x: float): float		9
+nim	ln	nim_math_tools/log.html#ln,seq[T]	proc ln[T](x: seq[T]): seq[untyped]		12
+nim	log	nim_math_tools/log.html#log,seq[T],float	proc log[T](x: seq[T]; base: float = 10.0): seq[untyped]		15
+nim	log_1_0	nim_math_tools/log.html#log_1_0,seq[T]	proc log_1_0[T](x: seq[T]): seq[untyped]		19
+nimgrp	log	nim_math_tools/log.html#log-procs-all	proc		9

@@ -1,0 +1,6 @@
+nimTitle	operator_mod	nim_math_tools/operator_mod.html	module src/nim_math_tools/operator_mod		0
+nim	`mod`	nim_math_tools/operator_mod.html#mod,seq[T],SomeNumber	proc `mod`[T](a: seq[T]; b: SomeNumber): seq[untyped]		6
+nim	`mod`	nim_math_tools/operator_mod.html#mod,SomeNumber,seq[T]	proc `mod`[T](a: SomeNumber; b: seq[T]): seq[untyped]		9
+nim	`mod`	nim_math_tools/operator_mod.html#mod,seq[T],seq[U]	proc `mod`[T, U](a: seq[T]; b: seq[U]): seq[untyped]		12
+nim	`%`	nim_math_tools/operator_mod.html#%.t,typed,typed	template `%`(a: typed; b: typed): untyped		16
+nimgrp	mod	nim_math_tools/operator_mod.html#mod-procs-all	proc		6

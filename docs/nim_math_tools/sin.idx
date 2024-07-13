@@ -1,0 +1,2 @@
+nimTitle	sin	nim_math_tools/sin.html	module src/nim_math_tools/sin		0
+nim	sin	nim_math_tools/sin.html#sin,seq[T]	proc sin[T](x: seq[T]): seq[untyped]		7

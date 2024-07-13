@@ -1,0 +1,2 @@
+nimTitle	combinations	nim_math_tools/combinations.html	module src/nim_math_tools/combinations		0
+nim	combinations	nim_math_tools/combinations.html#combinations,seq[T],int	proc combinations[T](x: seq[T]; r: int): seq[seq[T]]		6

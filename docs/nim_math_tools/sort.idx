@@ -1,0 +1,5 @@
+nimTitle	sort	nim_math_tools/sort.html	module src/nim_math_tools/sort		0
+nim	default_sort_cmp	nim_math_tools/sort.html#default_sort_cmp,T,T	proc default_sort_cmp[T](a: T; b: T): int		4
+nim	sort	nim_math_tools/sort.html#sort,seq[T],proc(T,T)	proc sort[T](x: seq[T]; fn: proc (a: T; b: T): int): seq[untyped]		13
+nim	sort	nim_math_tools/sort.html#sort,seq[T]	proc sort[T](x: seq[T]): seq[untyped]		29
+nimgrp	sort	nim_math_tools/sort.html#sort-procs-all	proc		13

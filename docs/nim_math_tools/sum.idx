@@ -1,0 +1,2 @@
+nimTitle	sum	nim_math_tools/sum.html	module src/nim_math_tools/sum		0
+nim	sum	nim_math_tools/sum.html#sum,seq[T]	proc sum[T](x: seq[T]): float		5

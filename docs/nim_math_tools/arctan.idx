@@ -1,0 +1,2 @@
+nimTitle	arctan	nim_math_tools/arctan.html	module src/nim_math_tools/arctan		0
+nim	arctan	nim_math_tools/arctan.html#arctan,seq[T]	proc arctan[T](x: seq[T]): seq[untyped]		7

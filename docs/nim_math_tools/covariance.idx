@@ -1,0 +1,2 @@
+nimTitle	covariance	nim_math_tools/covariance.html	module src/nim_math_tools/covariance		0
+nim	covariance	nim_math_tools/covariance.html#covariance,seq[float],seq[float]	proc covariance(a: seq[float]; b: seq[float]): float		3

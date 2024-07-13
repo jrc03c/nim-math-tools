@@ -1,0 +1,3 @@
+nimTitle	identity	nim_math_tools/identity.html	module src/nim_math_tools/identity		0
+nim	identity	nim_math_tools/identity.html#identity.t,int,typedesc	template identity(n: int; T: typedesc = float): seq[seq[T:type]]		5
+nim	eye	nim_math_tools/identity.html#eye.t,int,typedesc	template eye(n: int; T: typedesc = float): seq[seq[T:type]]		15

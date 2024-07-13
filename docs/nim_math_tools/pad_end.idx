@@ -1,0 +1,2 @@
+nimTitle	pad_end	nim_math_tools/pad_end.html	module src/nim_math_tools/pad_end		0
+nim	pad_end	nim_math_tools/pad_end.html#pad_end,string,int,string	proc pad_end(x: string; n: int; c: string = " "): string		1

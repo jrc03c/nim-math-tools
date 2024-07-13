@@ -1,0 +1,4 @@
+nimTitle	clamp	nim_math_tools/clamp.html	module src/nim_math_tools/clamp		0
+nim	clamp	nim_math_tools/clamp.html#clamp,SomeNumber,SomeNumber,SomeNumber	proc clamp(x: SomeNumber; xmin: SomeNumber; xmax: SomeNumber): SomeNumber		5
+nim	clamp	nim_math_tools/clamp.html#clamp,seq[T],SomeNumber,SomeNumber	proc clamp[T](x: seq[T]; xmin: SomeNumber; xmax: SomeNumber): seq[untyped]		16
+nimgrp	clamp	nim_math_tools/clamp.html#clamp-procs-all	proc		5

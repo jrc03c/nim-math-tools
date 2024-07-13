@@ -1,0 +1,2 @@
+nimTitle	drop_nan	nim_math_tools/drop_nan.html	module src/nim_math_tools/drop_nan		0
+nim	drop_nan	nim_math_tools/drop_nan.html#drop_nan,seq[float]	proc drop_nan(x: seq[float]): seq[float]		4

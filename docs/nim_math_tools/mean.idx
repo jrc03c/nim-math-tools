@@ -1,0 +1,2 @@
+nimTitle	mean	nim_math_tools/mean.html	module src/nim_math_tools/mean		0
+nim	mean	nim_math_tools/mean.html#mean,seq[T]	proc mean[T](x: seq[T]): float		5

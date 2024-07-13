@@ -1,0 +1,2 @@
+nimTitle	shape	nim_math_tools/shape.html	module src/nim_math_tools/shape		0
+nim	shape	nim_math_tools/shape.html#shape,seq[T]	proc shape[T](x: seq[T]): seq[int]		4

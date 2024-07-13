@@ -1,0 +1,13 @@
+nimTitle	to_float	nim_math_tools/to_float.html	module src/nim_math_tools/to_float		0
+nim	to_float	nim_math_tools/to_float.html#to_float,float	proc to_float(x: float): float		5
+nim	to_float	nim_math_tools/to_float.html#to_float,bool	proc to_float(x: bool): float		8
+nim	to_float	nim_math_tools/to_float.html#to_float,string	proc to_float(x: string): float		14
+nim	to_float	nim_math_tools/to_float.html#to_float,seq[int]	proc to_float(x: seq[int]): seq[float]		21
+nim	to_float	nim_math_tools/to_float.html#to_float,seq[T]	proc to_float[T](x: seq[T]): seq[untyped]		24
+nim	float	nim_math_tools/to_float.html#float,float	proc float(x: float): float		50
+nim	float	nim_math_tools/to_float.html#float,bool	proc float(x: bool): float		53
+nim	float	nim_math_tools/to_float.html#float,string	proc float(x: string): float		56
+nim	float	nim_math_tools/to_float.html#float,seq[int]	proc float(x: seq[int]): seq[float]		59
+nim	float	nim_math_tools/to_float.html#float,seq[T]	proc float[T](x: seq[T]): seq[untyped]		62
+nimgrp	tofloat	nim_math_tools/to_float.html#to_float-procs-all	proc		5
+nimgrp	float	nim_math_tools/to_float.html#float-procs-all	proc		50

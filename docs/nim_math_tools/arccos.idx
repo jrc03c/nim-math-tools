@@ -1,0 +1,2 @@
+nimTitle	arccos	nim_math_tools/arccos.html	module src/nim_math_tools/arccos		0
+nim	arccos	nim_math_tools/arccos.html#arccos,seq[T]	proc arccos[T](x: seq[T]): seq[untyped]		7

@@ -1,0 +1,2 @@
+nimTitle	inverse	nim_math_tools/inverse.html	module src/nim_math_tools/inverse		0
+nim	inverse	nim_math_tools/inverse.html#inverse,seq[seq[float]]	proc inverse(x: seq[seq[float]]): seq[seq[float]]		13

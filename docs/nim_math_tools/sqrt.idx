@@ -1,0 +1,4 @@
+nimTitle	sqrt	nim_math_tools/sqrt.html	module src/nim_math_tools/sqrt		0
+nim	sqrt	nim_math_tools/sqrt.html#sqrt,int	proc sqrt(x: int): float		7
+nim	sqrt	nim_math_tools/sqrt.html#sqrt,seq[T]	proc sqrt[T](x: seq[T]): seq[untyped]		10
+nimgrp	sqrt	nim_math_tools/sqrt.html#sqrt-procs-all	proc		7

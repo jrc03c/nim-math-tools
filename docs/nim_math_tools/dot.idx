@@ -1,0 +1,6 @@
+nimTitle	dot	nim_math_tools/dot.html	module src/nim_math_tools/dot		0
+nim	dot	nim_math_tools/dot.html#dot,seq[SomeNumber],seq[SomeNumber]	proc dot(a: seq[SomeNumber]; b: seq[SomeNumber]): SomeNumber		3
+nim	dot	nim_math_tools/dot.html#dot,seq[seq[SomeNumber]],seq[SomeNumber]	proc dot(a: seq[seq[SomeNumber]]; b: seq[SomeNumber]): seq[SomeNumber]		16
+nim	dot	nim_math_tools/dot.html#dot,seq[SomeNumber],seq[seq[SomeNumber]]	proc dot(a: seq[SomeNumber]; b: seq[seq[SomeNumber]]): seq[SomeNumber]		29
+nim	dot	nim_math_tools/dot.html#dot,seq[seq[SomeNumber]],seq[seq[SomeNumber]]	proc dot(a: seq[seq[SomeNumber]]; b: seq[seq[SomeNumber]]): seq[seq[SomeNumber]]		47
+nimgrp	dot	nim_math_tools/dot.html#dot-procs-all	proc		3

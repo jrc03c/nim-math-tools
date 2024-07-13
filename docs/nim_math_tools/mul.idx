@@ -1,0 +1,20 @@
+nimTitle	mul	nim_math_tools/mul.html	module src/nim_math_tools/mul		0
+nim	mul	nim_math_tools/mul.html#mul,bool,bool	proc mul(a: bool; b: bool): int		3
+nim	mul	nim_math_tools/mul.html#mul,int,bool	proc mul(a: int; b: bool): int		6
+nim	mul	nim_math_tools/mul.html#mul,bool,int	proc mul(a: bool; b: int): int		9
+nim	mul	nim_math_tools/mul.html#mul,float,bool	proc mul(a: float; b: bool): float		12
+nim	mul	nim_math_tools/mul.html#mul,bool,float	proc mul(a: bool; b: float): float		15
+nim	mul	nim_math_tools/mul.html#mul,int,int	proc mul(a: int; b: int): int		18
+nim	mul	nim_math_tools/mul.html#mul,float,int	proc mul(a: float; b: int): float		21
+nim	mul	nim_math_tools/mul.html#mul,int,float	proc mul(a: int; b: float): float		24
+nim	mul	nim_math_tools/mul.html#mul,float,float	proc mul(a: float; b: float): float		27
+nim	mul	nim_math_tools/mul.html#mul,string,bool	proc mul(a: string; b: bool): string		30
+nim	mul	nim_math_tools/mul.html#mul,bool,string	proc mul(a: bool; b: string): string		33
+nim	mul	nim_math_tools/mul.html#mul,string,int	proc mul(a: string; b: int): string		36
+nim	mul	nim_math_tools/mul.html#mul,int,string	proc mul(a: int; b: string): string		39
+nim	mul	nim_math_tools/mul.html#mul,string,float	proc mul(a: string; b: float): string		42
+nim	mul	nim_math_tools/mul.html#mul,float,string	proc mul(a: float; b: string): string		45
+nim	mul	nim_math_tools/mul.html#mul,seq[T],U	proc mul[T, U](a: seq[T]; b: U): seq[untyped]		48
+nim	mul	nim_math_tools/mul.html#mul,T,seq[U]	proc mul[T, U](a: T; b: seq[U]): seq[untyped]		51
+nim	mul	nim_math_tools/mul.html#mul,seq[T],seq[U]	proc mul[T, U](a: seq[T]; b: seq[U]): seq[untyped]		54
+nimgrp	mul	nim_math_tools/mul.html#mul-procs-all	proc		3

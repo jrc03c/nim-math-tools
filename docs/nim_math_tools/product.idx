@@ -1,0 +1,2 @@
+nimTitle	product	nim_math_tools/product.html	module src/nim_math_tools/product		0
+nim	product	nim_math_tools/product.html#product,seq[T]	proc product[T](x: seq[T]): SomeNumber		5

@@ -1,0 +1,4 @@
+nimTitle	ones	nim_math_tools/ones.html	module src/nim_math_tools/ones		0
+nim	ones	nim_math_tools/ones.html#ones.t,seq[int]	template ones(shape: seq[int]): seq[untyped]		7
+nim	ones	nim_math_tools/ones.html#ones.t,int	template ones(n: int): seq[untyped]		10
+nimgrp	ones	nim_math_tools/ones.html#ones-templates-all	template		7

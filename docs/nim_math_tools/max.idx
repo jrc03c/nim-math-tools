@@ -1,0 +1,6 @@
+nimTitle	max	nim_math_tools/max.html	module src/nim_math_tools/max		0
+nim	max	nim_math_tools/max.html#max.t,seq[T]	template max[T](x: seq[T]): untyped		5
+nim	max	nim_math_tools/max.html#max,int,int	proc max(a: int; b: int): int		18
+nim	max	nim_math_tools/max.html#max,int,float	proc max(a: int; b: float): float		24
+nim	max	nim_math_tools/max.html#max,float,int	proc max(a: float; b: int): float		32
+nimgrp	max	nim_math_tools/max.html#max-procs-all	proc		18

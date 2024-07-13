@@ -1,0 +1,2 @@
+nimTitle	exp	nim_math_tools/exp.html	module src/nim_math_tools/exp		0
+nim	exp	nim_math_tools/exp.html#exp,seq[T]	proc exp[T](x: seq[T]): seq[untyped]		7

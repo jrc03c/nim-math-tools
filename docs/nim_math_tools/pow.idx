@@ -1,0 +1,2 @@
+nimTitle	pow	nim_math_tools/pow.html	module src/nim_math_tools/pow		0
+nim	pow	nim_math_tools/pow.html#pow.t,T,U	template pow[T, U](a: T; b: U): untyped		5

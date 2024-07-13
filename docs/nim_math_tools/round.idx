@@ -1,0 +1,2 @@
+nimTitle	round	nim_math_tools/round.html	module src/nim_math_tools/round		0
+nim	round	nim_math_tools/round.html#round,seq[T]	proc round[T](x: seq[T]): seq[untyped]		7

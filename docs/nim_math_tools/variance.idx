@@ -1,0 +1,2 @@
+nimTitle	variance	nim_math_tools/variance.html	module src/nim_math_tools/variance		0
+nim	variance	nim_math_tools/variance.html#variance,seq[T]	proc variance[T](x: seq[T]): float		7

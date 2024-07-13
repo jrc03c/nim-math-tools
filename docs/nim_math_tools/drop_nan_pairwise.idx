@@ -1,0 +1,2 @@
+nimTitle	drop_nan_pairwise	nim_math_tools/drop_nan_pairwise.html	module src/nim_math_tools/drop_nan_pairwise		0
+nim	drop_nan_pairwise	nim_math_tools/drop_nan_pairwise.html#drop_nan_pairwise,seq[float],seq[float]	proc drop_nan_pairwise(a: seq[float]; b: seq[float]): (seq[float], seq[float])		3

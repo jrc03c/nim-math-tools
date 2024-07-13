@@ -1,0 +1,31 @@
+nimTitle	operator_add	nim_math_tools/operator_add.html	module src/nim_math_tools/operator_add		0
+nim	`+`	nim_math_tools/operator_add.html#+,bool,bool	proc `+`(a: bool; b: bool): int		5
+nim	`+`	nim_math_tools/operator_add.html#+,int,bool	proc `+`(a: int; b: bool): int		17
+nim	`+`	nim_math_tools/operator_add.html#+,bool,int	proc `+`(a: bool; b: int): int		23
+nim	`+`	nim_math_tools/operator_add.html#+,float,bool	proc `+`(a: float; b: bool): float		29
+nim	`+`	nim_math_tools/operator_add.html#+,bool,float	proc `+`(a: bool; b: float): float		35
+nim	`+`	nim_math_tools/operator_add.html#+,int,float	proc `+`(a: int; b: float): float		41
+nim	`+`	nim_math_tools/operator_add.html#+,float,int	proc `+`(a: float; b: int): float		44
+nim	`+`	nim_math_tools/operator_add.html#+,string,string	proc `+`(a: string; b: string): string		47
+nim	`+`	nim_math_tools/operator_add.html#+,string,bool	proc `+`(a: string; b: bool): string		50
+nim	`+`	nim_math_tools/operator_add.html#+,bool,string	proc `+`(a: bool; b: string): string		53
+nim	`+`	nim_math_tools/operator_add.html#+,string,int	proc `+`(a: string; b: int): string		56
+nim	`+`	nim_math_tools/operator_add.html#+,int,string	proc `+`(a: int; b: string): string		59
+nim	`+`	nim_math_tools/operator_add.html#+,string,float	proc `+`(a: string; b: float): string		62
+nim	`+`	nim_math_tools/operator_add.html#+,float,string	proc `+`(a: float; b: string): string		65
+nim	`+`	nim_math_tools/operator_add.html#+,seq[T],	proc `+`[T](a: seq[T]; b: (bool or int or float or string)): seq[untyped]		68
+nim	`+`	nim_math_tools/operator_add.html#+,,seq[T]	proc `+`[T](a: (bool or int or float or string); b: seq[T]): seq[untyped]		76
+nim	`+`	nim_math_tools/operator_add.html#+,seq[T],seq[U]	proc `+`[T, U](a: seq[T]; b: seq[U]): seq[untyped]		84
+nim	`+=`	nim_math_tools/operator_add.html#+=,int,	proc `+=`(a: var int; b: (bool or int))		91
+nim	`+=`	nim_math_tools/operator_add.html#+=,float,	proc `+=`(a: var float; b: (bool or int))		94
+nim	`+=`	nim_math_tools/operator_add.html#+=,string,	proc `+=`(a: var string; b: (bool or int or float or string))		97
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[int],	proc `+=`(a: var seq[int]; b: (bool or int))		100
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[float],	proc `+=`(a: var seq[float]; b: (bool or int or float))		103
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[string],	proc `+=`(a: var seq[string]; b: (bool or int or float or string))		106
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[int],seq[]	proc `+=`(a: var seq[int]; b: seq[(bool or int)])		109
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[float],seq[]	proc `+=`(a: var seq[float]; b: seq[(bool or int or float)])		112
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[string],seq[]	proc `+=`(a: var seq[string]; b: seq[(bool or int or float or string)])		115
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[T],U	proc `+=`[T, U](a: var seq[T]; b: U)		118
+nim	`+=`	nim_math_tools/operator_add.html#+=,seq[T],seq[U]	proc `+=`[T, U](a: var seq[T]; b: seq[U])		121
+nimgrp	+=	nim_math_tools/operator_add.html#+=-procs-all	proc		91
+nimgrp	+	nim_math_tools/operator_add.html#+-procs-all	proc		5

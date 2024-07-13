@@ -1,0 +1,4 @@
+nimTitle	factorial	nim_math_tools/factorial.html	module src/nim_math_tools/factorial		0
+nim	factorial	nim_math_tools/factorial.html#factorial,int	proc factorial(n: int): int		1
+nim	factorial	nim_math_tools/factorial.html#factorial,float	proc factorial(n: float): float		9
+nimgrp	factorial	nim_math_tools/factorial.html#factorial-procs-all	proc		1

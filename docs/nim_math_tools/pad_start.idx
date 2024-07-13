@@ -1,0 +1,2 @@
+nimTitle	pad_start	nim_math_tools/pad_start.html	module src/nim_math_tools/pad_start		0
+nim	pad_start	nim_math_tools/pad_start.html#pad_start,string,int,string	proc pad_start(x: string; n: int; c: string = " "): string		1

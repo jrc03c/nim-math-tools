@@ -1,0 +1,2 @@
+nimTitle	count	nim_math_tools/count.html	module src/nim_math_tools/count		0
+nim	count	nim_math_tools/count.html#count,seq[T]	proc count[T](x: seq[T]): TableRef[untyped, int]		7

@@ -1,0 +1,4 @@
+nimTitle	chop	nim_math_tools/chop.html	module src/nim_math_tools/chop		0
+nim	chop	nim_math_tools/chop.html#chop,float,float	proc chop(x: float; threshold: float = 1e-10): float		5
+nim	chop	nim_math_tools/chop.html#chop,seq[T],float	proc chop[T](x: seq[T]; threshold: float = 1e-10): seq[untyped]		11
+nimgrp	chop	nim_math_tools/chop.html#chop-procs-all	proc		5

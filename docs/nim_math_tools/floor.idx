@@ -1,0 +1,4 @@
+nimTitle	floor	nim_math_tools/floor.html	module src/nim_math_tools/floor		0
+nim	floor	nim_math_tools/floor.html#floor,bool	proc floor(x: bool): float		9
+nim	floor	nim_math_tools/floor.html#floor,seq[T]	proc floor[T](x: seq[T]): seq[untyped]		15
+nimgrp	floor	nim_math_tools/floor.html#floor-procs-all	proc		9

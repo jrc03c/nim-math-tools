@@ -1,0 +1,2 @@
+nimTitle	median	nim_math_tools/median.html	module src/nim_math_tools/median		0
+nim	median	nim_math_tools/median.html#median.t,seq[T]	template median[T](x: seq[T]): untyped		7

@@ -1,0 +1,2 @@
+nimTitle	apply	nim_math_tools/apply.html	module src/nim_math_tools/apply		0
+nim	apply	nim_math_tools/apply.html#apply.t,T,proc(U)	template apply[T, U, V](x: T; fn: proc (u: U): V): untyped		4

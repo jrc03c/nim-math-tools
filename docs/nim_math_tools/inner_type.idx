@@ -1,0 +1,2 @@
+nimTitle	inner_type	nim_math_tools/inner_type.html	module src/nim_math_tools/inner_type		0
+nim	inner_type	nim_math_tools/inner_type.html#inner_type.t,typed	template inner_type(x: typed): untyped		3

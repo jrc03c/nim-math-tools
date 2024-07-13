@@ -1,0 +1,1 @@
+nim doc --project --outdir=docs src/nim_math_tools

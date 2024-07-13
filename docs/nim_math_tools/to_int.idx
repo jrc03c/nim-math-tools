@@ -1,0 +1,14 @@
+nimTitle	to_int	nim_math_tools/to_int.html	module src/nim_math_tools/to_int		0
+nim	to_int	nim_math_tools/to_int.html#to_int,int	proc to_int(x: int): int		5
+nim	to_int	nim_math_tools/to_int.html#to_int,bool	proc to_int(x: bool): int		8
+nim	to_int	nim_math_tools/to_int.html#to_int,string	proc to_int(x: string): int		14
+nim	to_int	nim_math_tools/to_int.html#to_int,seq[int]	proc to_int(x: seq[int]): seq[int]		21
+nim	to_int	nim_math_tools/to_int.html#to_int,seq[T]	proc to_int[T](x: seq[T]): seq[untyped]		24
+nim	int	nim_math_tools/to_int.html#int,int	proc int(x: int): int		50
+nim	int	nim_math_tools/to_int.html#int,float	proc int(x: float): int		53
+nim	int	nim_math_tools/to_int.html#int,bool	proc int(x: bool): int		56
+nim	int	nim_math_tools/to_int.html#int,string	proc int(x: string): int		59
+nim	int	nim_math_tools/to_int.html#int,seq[int]	proc int(x: seq[int]): seq[int]		62
+nim	int	nim_math_tools/to_int.html#int,seq[T]	proc int[T](x: seq[T]): seq[untyped]		65
+nimgrp	int	nim_math_tools/to_int.html#int-procs-all	proc		50
+nimgrp	toint	nim_math_tools/to_int.html#to_int-procs-all	proc		5

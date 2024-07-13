@@ -1,0 +1,5 @@
+nimTitle	argmin	nim_math_tools/argmin.html	module src/nim_math_tools/argmin		0
+nim	argmin	nim_math_tools/argmin.html#argmin,seq[int]	proc argmin(x: seq[int]): int		1
+nim	argmin	nim_math_tools/argmin.html#argmin,seq[float]	proc argmin(x: seq[float]): int		15
+nim	argmin	nim_math_tools/argmin.html#argmin,seq[string]	proc argmin(x: seq[string]): int		29
+nimgrp	argmin	nim_math_tools/argmin.html#argmin-procs-all	proc		1

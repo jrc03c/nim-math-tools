@@ -1,0 +1,2 @@
+nimTitle	intersect	nim_math_tools/intersect.html	module src/nim_math_tools/intersect		0
+nim	intersect	nim_math_tools/intersect.html#intersect,seq[T],seq[U]	proc intersect[T, U](a: seq[T]; b: seq[U]): seq[untyped]		7

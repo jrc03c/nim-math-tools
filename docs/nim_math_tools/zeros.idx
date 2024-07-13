@@ -1,0 +1,2 @@
+nimTitle	zeros	nim_math_tools/zeros.html	module src/nim_math_tools/zeros		0
+nim	zeros	nim_math_tools/zeros.html#zeros.t,T	template zeros[T](shape: T): untyped		5

@@ -1,0 +1,2 @@
+nimTitle	arcsin	nim_math_tools/arcsin.html	module src/nim_math_tools/arcsin		0
+nim	arcsin	nim_math_tools/arcsin.html#arcsin,seq[T]	proc arcsin[T](x: seq[T]): seq[untyped]		7

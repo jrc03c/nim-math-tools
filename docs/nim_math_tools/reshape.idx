@@ -1,0 +1,2 @@
+nimTitle	reshape	nim_math_tools/reshape.html	module src/nim_math_tools/reshape		0
+nim	reshape	nim_math_tools/reshape.html#reshape.t,seq[T],seq[int]	template reshape[T](x: seq[T]; new_shape: seq[int]): untyped		8

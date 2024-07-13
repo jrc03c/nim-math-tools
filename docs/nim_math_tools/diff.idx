@@ -1,0 +1,3 @@
+nimTitle	diff	nim_math_tools/diff.html	module src/nim_math_tools/diff		0
+nim	diff	nim_math_tools/diff.html#diff,seq[T],seq[U]	proc diff[T, U](a: seq[T]; b: seq[U]): seq[untyped]		10
+nim	diff_both	nim_math_tools/diff.html#diff_both,seq[T],seq[U]	proc diff_both[T, U](a: seq[T]; b: seq[U]): seq[untyped]		21

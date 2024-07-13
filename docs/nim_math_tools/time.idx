@@ -1,0 +1,2 @@
+nimTitle	time	nim_math_tools/time.html	module src/nim_math_tools/time		0
+nim	time	nim_math_tools/time.html#time.t,proc,varargs[untyped]	template time(fn: proc; args: varargs[untyped]): float		3

@@ -1,0 +1,5 @@
+nimTitle	normal	nim_math_tools/normal.html	module src/nim_math_tools/normal		0
+nim	normal	nim_math_tools/normal.html#normal	proc normal(): float		12
+nim	normal	nim_math_tools/normal.html#normal,int	proc normal(n: int): seq[float]		17
+nim	normal	nim_math_tools/normal.html#normal.t,seq[int]	template normal(shape: seq[int]): seq[untyped]		20
+nimgrp	normal	nim_math_tools/normal.html#normal-procs-all	proc		12

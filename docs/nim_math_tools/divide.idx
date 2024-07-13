@@ -1,0 +1,12 @@
+nimTitle	divide	nim_math_tools/divide.html	module src/nim_math_tools/divide		0
+nim	divide	nim_math_tools/divide.html#divide,bool,	proc divide(a: bool; b: (bool or int)): int		5
+nim	divide	nim_math_tools/divide.html#divide,bool,float	proc divide(a: bool; b: float): float		8
+nim	divide	nim_math_tools/divide.html#divide,int,bool	proc divide(a: int; b: bool): int		11
+nim	divide	nim_math_tools/divide.html#divide,int,int	proc divide(a: int; b: int): float		14
+nim	divide	nim_math_tools/divide.html#divide,int,float	proc divide(a: int; b: float): float		17
+nim	divide	nim_math_tools/divide.html#divide,float,	proc divide(a: float; b: (bool or int or float)): float		20
+nim	divide	nim_math_tools/divide.html#divide,string,	proc divide(a: string; b: (bool or int or float)): string		23
+nim	divide	nim_math_tools/divide.html#divide,seq[T],U	proc divide[T, U](a: seq[T]; b: U): seq[untyped]		26
+nim	divide	nim_math_tools/divide.html#divide,T,seq[U]	proc divide[T, U](a: T; b: seq[U]): seq[untyped]		29
+nim	divide	nim_math_tools/divide.html#divide,seq[T],seq[U]	proc divide[T, U](a: seq[T]; b: seq[U]): seq[untyped]		32
+nimgrp	divide	nim_math_tools/divide.html#divide-procs-all	proc		5

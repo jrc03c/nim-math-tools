@@ -1,0 +1,2 @@
+nimTitle	permutations	nim_math_tools/permutations.html	module src/nim_math_tools/permutations		0
+nim	permutations	nim_math_tools/permutations.html#permutations,seq[T],int	proc permutations[T](x: seq[T]; r: int): seq[seq[T]]		6

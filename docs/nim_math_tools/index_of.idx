@@ -1,0 +1,4 @@
+nimTitle	index_of	nim_math_tools/index_of.html	module src/nim_math_tools/index_of		0
+nim	index_of	nim_math_tools/index_of.html#index_of,seq[T],proc(U)	proc index_of[T, U](x: seq[T]; fn: proc (v: U): bool): seq[int]		3
+nim	index_of	nim_math_tools/index_of.html#index_of,seq[T],NotProc	proc index_of[T](x: seq[T]; value: NotProc): seq[int]		23
+nimgrp	indexof	nim_math_tools/index_of.html#index_of-procs-all	proc		3

@@ -1,0 +1,14 @@
+nimTitle	sub	nim_math_tools/sub.html	module src/nim_math_tools/sub		0
+nim	sub	nim_math_tools/sub.html#sub,bool,	proc sub(a: bool; b: (bool or int)): int		3
+nim	sub	nim_math_tools/sub.html#sub,bool,float	proc sub(a: bool; b: float): float		6
+nim	sub	nim_math_tools/sub.html#sub,bool,string	proc sub(a: bool; b: string): string		9
+nim	sub	nim_math_tools/sub.html#sub,int,	proc sub(a: int; b: (bool or int)): int		12
+nim	sub	nim_math_tools/sub.html#sub,int,float	proc sub(a: int; b: float): float		15
+nim	sub	nim_math_tools/sub.html#sub,int,string	proc sub(a: int; b: string): string		18
+nim	sub	nim_math_tools/sub.html#sub,float,	proc sub(a: float; b: (bool or int or float)): float		21
+nim	sub	nim_math_tools/sub.html#sub,float,string	proc sub(a: float; b: string): string		24
+nim	sub	nim_math_tools/sub.html#sub,string,	proc sub(a: string; b: (bool or int or float or string)): string		27
+nim	sub	nim_math_tools/sub.html#sub,seq[T],U	proc sub[T, U](a: seq[T]; b: U): seq[untyped]		30
+nim	sub	nim_math_tools/sub.html#sub,T,seq[U]	proc sub[T, U](a: T; b: seq[U]): seq[untyped]		33
+nim	sub	nim_math_tools/sub.html#sub,seq[T],seq[U]	proc sub[T, U](a: seq[T]; b: seq[U]): seq[untyped]		36
+nimgrp	sub	nim_math_tools/sub.html#sub-procs-all	proc		3

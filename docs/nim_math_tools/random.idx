@@ -1,0 +1,5 @@
+nimTitle	random	nim_math_tools/random.html	module src/nim_math_tools/random		0
+nim	random	nim_math_tools/random.html#random	proc random(): float		11
+nim	random	nim_math_tools/random.html#random,int	proc random(n: int): seq[float]		14
+nim	random	nim_math_tools/random.html#random.t,seq[int]	template random(shape: seq[int]): seq[untyped]		17
+nimgrp	random	nim_math_tools/random.html#random-procs-all	proc		11

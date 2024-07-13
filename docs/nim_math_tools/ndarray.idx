@@ -1,0 +1,4 @@
+nimTitle	ndarray	nim_math_tools/ndarray.html	module src/nim_math_tools/ndarray		0
+nim	ndarray	nim_math_tools/ndarray.html#ndarray.t,seq[int],typedesc	template ndarray(shape: seq[int]; T: typedesc = float): untyped		1
+nim	ndarray	nim_math_tools/ndarray.html#ndarray.t,int,typedesc	template ndarray(n: int; T: typedesc = float): untyped		30
+nimgrp	ndarray	nim_math_tools/ndarray.html#ndarray-templates-all	template		1

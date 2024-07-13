@@ -1,0 +1,2 @@
+nimTitle	correl	nim_math_tools/correl.html	module src/nim_math_tools/correl		0
+nim	correl	nim_math_tools/correl.html#correl,seq[T],seq[T]	proc correl[T](a: seq[T]; b: seq[T]): float		5

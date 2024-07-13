@@ -1,0 +1,5 @@
+nimTitle	sign	nim_math_tools/sign.html	module src/nim_math_tools/sign		0
+nim	sign	nim_math_tools/sign.html#sign,float	proc sign(x: float): float		4
+nim	sign	nim_math_tools/sign.html#sign,int	proc sign(x: int): int		13
+nim	sign	nim_math_tools/sign.html#sign,seq[T]	proc sign[T](x: seq[T]): seq[untyped]		16
+nimgrp	sign	nim_math_tools/sign.html#sign-procs-all	proc		4

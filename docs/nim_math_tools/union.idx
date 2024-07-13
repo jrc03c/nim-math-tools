@@ -1,0 +1,2 @@
+nimTitle	union	nim_math_tools/union.html	module src/nim_math_tools/union		0
+nim	union	nim_math_tools/union.html#union.t,seq[T],seq[U]	template union[T, U](a: seq[T]; b: seq[U]): untyped		8

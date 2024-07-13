@@ -1,0 +1,2 @@
+nimTitle	tan	nim_math_tools/tan.html	module src/nim_math_tools/tan		0
+nim	tan	nim_math_tools/tan.html#tan,seq[T]	proc tan[T](x: seq[T]): seq[untyped]		7

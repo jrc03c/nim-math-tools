@@ -1,0 +1,3 @@
+nimTitle	operator_range_seq	nim_math_tools/operator_range_seq.html	module src/nim_math_tools/operator_range_seq		0
+nim	range_seq	nim_math_tools/operator_range_seq.html#range_seq,int,int,int	proc range_seq(a: int; b: int; step: int = 1): seq[int]		1
+nim	`...`	nim_math_tools/operator_range_seq.html#...,int,int	proc `...`(a: int; b: int): seq[int]		35

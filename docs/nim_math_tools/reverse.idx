@@ -1,0 +1,4 @@
+nimTitle	reverse	nim_math_tools/reverse.html	module src/nim_math_tools/reverse		0
+nim	reverse	nim_math_tools/reverse.html#reverse,string	proc reverse(x: string): string		1
+nim	reverse	nim_math_tools/reverse.html#reverse,seq[T]	proc reverse[T](x: seq[T]): seq[T]		10
+nimgrp	reverse	nim_math_tools/reverse.html#reverse-procs-all	proc		1

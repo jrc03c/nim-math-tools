@@ -1,0 +1,6 @@
+nimTitle	lerp	nim_math_tools/lerp.html	module src/nim_math_tools/lerp		0
+nim	lerp	nim_math_tools/lerp.html#lerp,float,float,float	proc lerp(a: float; b: float; f: float): float		5
+nim	lerp	nim_math_tools/lerp.html#lerp,seq[T],seq[T],float	proc lerp[T](a: seq[T]; b: seq[T]; f: float): seq[untyped]		8
+nim	lerp	nim_math_tools/lerp.html#lerp,float,float,seq[T]	proc lerp[T](a: float; b: float; f: seq[T]): seq[untyped]		12
+nim	lerp	nim_math_tools/lerp.html#lerp,seq[T],seq[T],seq[T]	proc lerp[T](a: seq[T]; b: seq[T]; f: seq[T]): seq[untyped]		15
+nimgrp	lerp	nim_math_tools/lerp.html#lerp-procs-all	proc		5

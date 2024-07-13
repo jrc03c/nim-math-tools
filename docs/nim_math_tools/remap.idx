@@ -1,0 +1,4 @@
+nimTitle	remap	nim_math_tools/remap.html	module src/nim_math_tools/remap		0
+nim	remap	nim_math_tools/remap.html#remap,float,float,float,float,float	proc remap(x, a, b, c, d: float): float		4
+nim	remap	nim_math_tools/remap.html#remap,seq[T],float,float,float,float	proc remap[T](x: seq[T]; a, b, c, d: float): seq[T]		7
+nimgrp	remap	nim_math_tools/remap.html#remap-procs-all	proc		4

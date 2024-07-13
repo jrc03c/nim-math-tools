@@ -1,0 +1,2 @@
+nimTitle	is_jagged	nim_math_tools/is_jagged.html	module src/nim_math_tools/is_jagged		0
+nim	is_jagged	nim_math_tools/is_jagged.html#is_jagged,seq[T]	proc is_jagged[T](x: seq[T]): bool		1

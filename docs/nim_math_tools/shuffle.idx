@@ -1,0 +1,2 @@
+nimTitle	shuffle	nim_math_tools/shuffle.html	module src/nim_math_tools/shuffle		0
+nim	shuffle	nim_math_tools/shuffle.html#shuffle,seq[T]	proc shuffle[T](x: seq[T]): seq[T]		3

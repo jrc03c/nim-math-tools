@@ -1,0 +1,2 @@
+nimTitle	transpose	nim_math_tools/transpose.html	module src/nim_math_tools/transpose		0
+nim	transpose	nim_math_tools/transpose.html#transpose,seq[seq[T]]	proc transpose[T](x: seq[seq[T]]): seq[seq[T]]		3

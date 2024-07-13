@@ -1,0 +1,4 @@
+nimTitle	abs	nim_math_tools/abs.html	module src/nim_math_tools/abs		0
+nim	abs	nim_math_tools/abs.html#abs,bool	proc abs(x: bool): float		7
+nim	abs	nim_math_tools/abs.html#abs,seq[T]	proc abs[T](x: seq[T]): seq[untyped]		13
+nimgrp	abs	nim_math_tools/abs.html#abs-procs-all	proc		7

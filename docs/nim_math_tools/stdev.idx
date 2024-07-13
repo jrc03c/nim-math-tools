@@ -1,0 +1,2 @@
+nimTitle	stdev	nim_math_tools/stdev.html	module src/nim_math_tools/stdev		0
+nim	stdev	nim_math_tools/stdev.html#stdev,seq[T]	proc stdev[T](x: seq[T]): float		6

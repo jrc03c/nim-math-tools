@@ -1,0 +1,13 @@
+nimTitle	operator_approx	nim_math_tools/operator_approx.html	module src/nim_math_tools/operator_approx		0
+nim	approx	nim_math_tools/operator_approx.html#approx,float,float,float	proc approx(a: float; b: float; tol: float = 0.00001): bool		3
+nim	approx	nim_math_tools/operator_approx.html#approx,int,int,int	proc approx(a: int; b: int; tol: int = 1): bool		15
+nim	approx	nim_math_tools/operator_approx.html#approx,int,float,float	proc approx(a: int; b: float; tol: float = 0.00001): bool		18
+nim	approx	nim_math_tools/operator_approx.html#approx,float,int,float	proc approx(a: float; b: int; tol: float = 0.00001): bool		21
+nim	approx	nim_math_tools/operator_approx.html#approx,seq[T],seq[U],float	proc approx[T, U](a: seq[T]; b: seq[U]; tol: float = 0.00001): bool		24
+nim	`~`	nim_math_tools/operator_approx.html#~,T,U	proc `~`[T, U](a: T; b: U): bool		34
+nim	`~`	nim_math_tools/operator_approx.html#~,seq[T],seq[U]	proc `~`[T, U](a: seq[T]; b: seq[U]): bool		37
+nim	`!~`	nim_math_tools/operator_approx.html#!~,T,U	proc `!~`[T, U](a: T; b: U): bool		40
+nim	`!~`	nim_math_tools/operator_approx.html#!~,seq[T],seq[U]	proc `!~`[T, U](a: seq[T]; b: seq[U]): bool		43
+nimgrp	!~	nim_math_tools/operator_approx.html#!~-procs-all	proc		40
+nimgrp	approx	nim_math_tools/operator_approx.html#approx-procs-all	proc		3
+nimgrp	~	nim_math_tools/operator_approx.html#~-procs-all	proc		34

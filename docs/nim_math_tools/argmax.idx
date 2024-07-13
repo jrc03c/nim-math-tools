@@ -1,0 +1,5 @@
+nimTitle	argmax	nim_math_tools/argmax.html	module src/nim_math_tools/argmax		0
+nim	argmax	nim_math_tools/argmax.html#argmax,seq[int]	proc argmax(x: seq[int]): int		1
+nim	argmax	nim_math_tools/argmax.html#argmax,seq[float]	proc argmax(x: seq[float]): int		15
+nim	argmax	nim_math_tools/argmax.html#argmax,seq[string]	proc argmax(x: seq[string]): int		29
+nimgrp	argmax	nim_math_tools/argmax.html#argmax-procs-all	proc		1

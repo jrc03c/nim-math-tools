@@ -1,0 +1,2 @@
+nimTitle	set	nim_math_tools/set.html	module src/nim_math_tools/set		0
+nim	set	nim_math_tools/set.html#set,seq[T]	proc set[T](x: seq[T]): seq[untyped]		7

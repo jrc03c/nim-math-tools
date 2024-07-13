@@ -1,0 +1,29 @@
+nimTitle	operator_sub	nim_math_tools/operator_sub.html	module src/nim_math_tools/operator_sub		0
+nim	`-`	nim_math_tools/operator_sub.html#-,bool,bool	proc `-`(a: bool; b: bool): int		6
+nim	`-`	nim_math_tools/operator_sub.html#-,int,bool	proc `-`(a: int; b: bool): int		18
+nim	`-`	nim_math_tools/operator_sub.html#-,bool,int	proc `-`(a: bool; b: int): int		24
+nim	`-`	nim_math_tools/operator_sub.html#-,float,bool	proc `-`(a: float; b: bool): float		30
+nim	`-`	nim_math_tools/operator_sub.html#-,bool,float	proc `-`(a: bool; b: float): float		36
+nim	`-`	nim_math_tools/operator_sub.html#-,int,float	proc `-`(a: int; b: float): float		42
+nim	`-`	nim_math_tools/operator_sub.html#-,float,int	proc `-`(a: float; b: int): float		45
+nim	`-`	nim_math_tools/operator_sub.html#-,string,string	proc `-`(a: string; b: string): string		48
+nim	`-`	nim_math_tools/operator_sub.html#-,string,bool	proc `-`(a: string; b: bool): string		56
+nim	`-`	nim_math_tools/operator_sub.html#-,bool,string	proc `-`(a: bool; b: string): string		59
+nim	`-`	nim_math_tools/operator_sub.html#-,string,int	proc `-`(a: string; b: int): string		62
+nim	`-`	nim_math_tools/operator_sub.html#-,int,string	proc `-`(a: int; b: string): string		65
+nim	`-`	nim_math_tools/operator_sub.html#-,string,float	proc `-`(a: string; b: float): string		68
+nim	`-`	nim_math_tools/operator_sub.html#-,float,string	proc `-`(a: float; b: string): string		71
+nim	`-`	nim_math_tools/operator_sub.html#-,seq[T],	proc `-`[T](a: seq[T]; b: (bool or int or float)): seq[untyped]		74
+nim	`-`	nim_math_tools/operator_sub.html#-,,seq[T]	proc `-`[T](a: (bool or int or float); b: seq[T]): seq[untyped]		82
+nim	`-`	nim_math_tools/operator_sub.html#-,seq[T],seq[U]	proc `-`[T, U](a: seq[T]; b: seq[U]): seq[untyped]		90
+nim	`-=`	nim_math_tools/operator_sub.html#-=,int,	proc `-=`(a: var int; b: (bool or int))		97
+nim	`-=`	nim_math_tools/operator_sub.html#-=,float,	proc `-=`(a: var float; b: (bool or int))		100
+nim	`-=`	nim_math_tools/operator_sub.html#-=,string,	proc `-=`(a: var string; b: (bool or int or float or string))		103
+nim	`-=`	nim_math_tools/operator_sub.html#-=,seq[int],	proc `-=`(a: var seq[int]; b: (bool or int))		106
+nim	`-=`	nim_math_tools/operator_sub.html#-=,seq[float],	proc `-=`(a: var seq[float]; b: (bool or int or float))		109
+nim	`-=`	nim_math_tools/operator_sub.html#-=,seq[int],seq[]	proc `-=`(a: var seq[int]; b: seq[(bool or int)])		112
+nim	`-=`	nim_math_tools/operator_sub.html#-=,seq[float],seq[]	proc `-=`(a: var seq[float]; b: seq[(bool or int or float)])		115
+nim	`-=`	nim_math_tools/operator_sub.html#-=,seq[T],U	proc `-=`[T, U](a: var seq[T]; b: U)		118
+nim	`-=`	nim_math_tools/operator_sub.html#-=,seq[T],seq[U]	proc `-=`[T, U](a: var seq[T]; b: seq[U])		121
+nimgrp	-	nim_math_tools/operator_sub.html#--procs-all	proc		6
+nimgrp	-=	nim_math_tools/operator_sub.html#-=-procs-all	proc		97

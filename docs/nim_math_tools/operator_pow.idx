@@ -1,0 +1,9 @@
+nimTitle	operator_pow	nim_math_tools/operator_pow.html	module src/nim_math_tools/operator_pow		0
+nim	`**`	nim_math_tools/operator_pow.html#**,int,int	proc `**`(a: int; b: int): int		6
+nim	`**`	nim_math_tools/operator_pow.html#**,float,float	proc `**`(a: float; b: float): float		9
+nim	`**`	nim_math_tools/operator_pow.html#**,int,float	proc `**`(a: int; b: float): float		12
+nim	`**`	nim_math_tools/operator_pow.html#**,float,int	proc `**`(a: float; b: int): float		15
+nim	`**`	nim_math_tools/operator_pow.html#**,seq[T],SomeNumber	proc `**`[T](a: seq[T]; b: SomeNumber): seq[untyped]		18
+nim	`**`	nim_math_tools/operator_pow.html#**,SomeNumber,seq[T]	proc `**`[T](a: SomeNumber; b: seq[T]): seq[untyped]		21
+nim	`**`	nim_math_tools/operator_pow.html#**,seq[T],seq[U]	proc `**`[T, U](a: seq[T]; b: seq[U]): seq[untyped]		24
+nimgrp	**	nim_math_tools/operator_pow.html#**-procs-all	proc		6

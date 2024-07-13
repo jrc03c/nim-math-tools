@@ -1,0 +1,14 @@
+nimTitle	add	nim_math_tools/add.html	module src/nim_math_tools/add		0
+nim	add	nim_math_tools/add.html#add,bool,	proc add(a: bool; b: (bool or int)): int		3
+nim	add	nim_math_tools/add.html#add,bool,float	proc add(a: bool; b: float): float		6
+nim	add	nim_math_tools/add.html#add,bool,string	proc add(a: bool; b: string): string		9
+nim	add	nim_math_tools/add.html#add,int,	proc add(a: int; b: (bool or int)): int		12
+nim	add	nim_math_tools/add.html#add,int,float	proc add(a: int; b: float): float		15
+nim	add	nim_math_tools/add.html#add,int,string	proc add(a: int; b: string): string		18
+nim	add	nim_math_tools/add.html#add,float,	proc add(a: float; b: (bool or int or float)): float		21
+nim	add	nim_math_tools/add.html#add,float,string	proc add(a: float; b: string): string		24
+nim	add	nim_math_tools/add.html#add,string,	proc add(a: string; b: (bool or int or float or string)): string		27
+nim	add	nim_math_tools/add.html#add,seq[T],U	proc add[T, U](a: seq[T]; b: U): seq[untyped]		30
+nim	add	nim_math_tools/add.html#add,T,seq[U]	proc add[T, U](a: T; b: seq[U]): seq[untyped]		33
+nim	add	nim_math_tools/add.html#add,seq[T],seq[U]	proc add[T, U](a: seq[T]; b: seq[U]): seq[untyped]		36
+nimgrp	add	nim_math_tools/add.html#add-procs-all	proc		3

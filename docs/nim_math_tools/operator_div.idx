@@ -1,0 +1,33 @@
+nimTitle	operator_div	nim_math_tools/operator_div.html	module src/nim_math_tools/operator_div		0
+nim	`/`	nim_math_tools/operator_div.html#/,bool,bool	proc `/`(a: bool; b: bool): int		6
+nim	`/`	nim_math_tools/operator_div.html#/,int,bool	proc `/`(a: int; b: bool): int		18
+nim	`/`	nim_math_tools/operator_div.html#/,bool,int	proc `/`(a: bool; b: int): int		24
+nim	`/`	nim_math_tools/operator_div.html#/,float,bool	proc `/`(a: float; b: bool): float		30
+nim	`/`	nim_math_tools/operator_div.html#/,bool,float	proc `/`(a: bool; b: float): float		36
+nim	`/`	nim_math_tools/operator_div.html#/,int,float	proc `/`(a: int; b: float): float		42
+nim	`/`	nim_math_tools/operator_div.html#/,float,int	proc `/`(a: float; b: int): float		45
+nim	`/`	nim_math_tools/operator_div.html#/,string,bool	proc `/`(a: string; b: bool): string		48
+nim	`/`	nim_math_tools/operator_div.html#/,string,int	proc `/`(a: string; b: int): string		54
+nim	`/`	nim_math_tools/operator_div.html#/,string,float	proc `/`(a: string; b: float): string		60
+nim	`/`	nim_math_tools/operator_div.html#/,seq[T],	proc `/`[T](a: seq[T]; b: (bool or int or float)): seq[untyped]		66
+nim	`/`	nim_math_tools/operator_div.html#/,,seq[T]	proc `/`[T](a: (bool or int or float); b: seq[T]): seq[untyped]		76
+nim	`/`	nim_math_tools/operator_div.html#/,seq[string],	proc `/`(a: seq[string]; b: (bool or int or float)): seq[string]		86
+nim	`/`	nim_math_tools/operator_div.html#/,string,seq[]	proc `/`(a: string; b: seq[(bool or int or float)]): seq[string]		89
+nim	`/`	nim_math_tools/operator_div.html#/,seq[string],seq[]	proc `/`(a: seq[string]; b: seq[(bool or int or float)]): seq[string]		92
+nim	`/`	nim_math_tools/operator_div.html#/,seq[T],U	proc `/`[T, U](a: seq[T]; b: U): seq[untyped]		97
+nim	`/`	nim_math_tools/operator_div.html#/,T,seq[U]	proc `/`[T, U](a: T; b: seq[U]): seq[untyped]		100
+nim	`/`	nim_math_tools/operator_div.html#/,seq[T],seq[U]	proc `/`[T, U](a: seq[T]; b: seq[U]): seq[untyped]		103
+nim	`/=`	nim_math_tools/operator_div.html#/=,int,int	proc `/=`(a: var int; b: int)		110
+nim	`/=`	nim_math_tools/operator_div.html#/=,int,bool	proc `/=`(a: var int; b: bool)		113
+nim	`/=`	nim_math_tools/operator_div.html#/=,float,	proc `/=`(a: var float; b: (bool or int))		116
+nim	`/=`	nim_math_tools/operator_div.html#/=,string,	proc `/=`(a: var string; b: (bool or int or float))		119
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[int],int	proc `/=`(a: var seq[int]; b: int)		122
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[int],bool	proc `/=`(a: var seq[int]; b: bool)		125
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[float],	proc `/=`(a: var seq[float]; b: (bool or int or float))		128
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[int],seq[int]	proc `/=`(a: var seq[int]; b: seq[int])		131
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[int],seq[]	proc `/=`(a: var seq[int]; b: seq[(bool or int)])		135
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[float],seq[]	proc `/=`(a: var seq[float]; b: seq[(bool or int or float)])		138
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[T],U	proc `/=`[T, U](a: var seq[T]; b: U)		141
+nim	`/=`	nim_math_tools/operator_div.html#/=,seq[T],seq[U]	proc `/=`[T, U](a: var seq[T]; b: seq[U])		144
+nimgrp	/	nim_math_tools/operator_div.html#/-procs-all	proc		6
+nimgrp	/=	nim_math_tools/operator_div.html#/=-procs-all	proc		110

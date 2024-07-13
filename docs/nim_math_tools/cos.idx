@@ -1,0 +1,2 @@
+nimTitle	cos	nim_math_tools/cos.html	module src/nim_math_tools/cos		0
+nim	cos	nim_math_tools/cos.html#cos,seq[T]	proc cos[T](x: seq[T]): seq[untyped]		7
